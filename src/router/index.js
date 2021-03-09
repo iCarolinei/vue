@@ -16,6 +16,7 @@ const routes = [
     name: "Test",
     component: Test
   }
+  
 ];
 
 const router = new VueRouter({

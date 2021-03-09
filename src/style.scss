@@ -1,7 +1,22 @@
-#app {
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+
+}
+#navbar {
  
     
-    text-align: center;
+ background:linear-gradient(0.25turn,#07BCCE,#3089D7,#6E3DE5);
+
+ a {
+     color: white;
+     text-decoration: none;
+     a:hover {
+        color: black;
+      }
+
+    
+ }
     
   }
   
