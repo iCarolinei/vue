@@ -9,6 +9,26 @@ body {
     text-decoration: none;
   }
   a:hover {
-    color: black !important;
+    color: #07bcce;
+    background-color: white;
+  }
+  ul.test a:hover {
+    color: #6e3de5;
+    background-color: white;
+  }
+  .dropdown-item {
+    color: #3089d7;
+  }
+  .dropdown-item:hover {
+    color: white;
+    background-color: #07bcce;
+  }
+  ul.test a.dropdown-item:hover {
+    color: white;
+    background-color:#6e3de5;
+  }
+  button {
+    border: none !important;
+    color: white !important;
   }
 }
