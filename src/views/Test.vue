@@ -1,16 +1,17 @@
 <template>
   <div>
-    <Test msg="Yo" />
+    <!-- <h1>View test</h1> -->
+    <Message content="Yo" />
   </div>
 </template>
 
 <script>
-import Test from "../components/Test.vue";
+import Message from "../components/Message.vue";
 
 export default {
   name: "Test",
   components: {
-    Test
+    Message
   }
 };
 </script>
