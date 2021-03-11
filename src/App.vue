@@ -18,8 +18,14 @@
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active px-2">
               <router-link to="/"
-                ><a class="nav-link" href="#">Home</a></router-link
-              >
+                ><a class="nav-link" href="#">
+                  <a href="https://fontmeme.com/fr/police-super-mario/"
+                    ><img
+                      class="nav-logo"
+                      src="https://fontmeme.com/permalink/210311/d153a1caf571032b6296533249d54f0a.png"
+                      alt="police-super-mario"
+                      border="0" /></a></a
+              ></router-link>
             </li>
             <li class="nav-item dropdown px-2">
               <a
@@ -35,20 +41,24 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <router-link to="/test"
-                  ><a class="dropdown-item" href="#">Action</a></router-link
+                  ><a class="dropdown-item nav-hover" href="#"
+                    >Action</a
+                  ></router-link
                 >
-                <a class="dropdown-item" href="#">Aventure</a>
-                <a class="dropdown-item" href="#">Combat</a>
-                <a class="dropdown-item" href="#">Course</a>
-                <a class="dropdown-item" href="#">Education</a>
-                <a class="dropdown-item" href="#">Musique et Rythme</a>
-                <a class="dropdown-item" href="#">Plateforme</a>
-                <a class="dropdown-item" href="#">RPG</a>
-                <a class="dropdown-item" href="#">Reflexion</a>
-                <a class="dropdown-item" href="#">Shooter</a>
-                <a class="dropdown-item" href="#">Simulation</a>
-                <a class="dropdown-item" href="#">Sports</a>
-                <a class="dropdown-item" href="#">Stratégie</a>
+                <a class="dropdown-item nav-hover" href="#">Aventure</a>
+                <a class="dropdown-item nav-hover" href="#">Combat</a>
+                <a class="dropdown-item nav-hover" href="#">Course</a>
+                <a class="dropdown-item nav-hover" href="#">Education</a>
+                <a class="dropdown-item nav-hover" href="#"
+                  >Musique et Rythme</a
+                >
+                <a class="dropdown-item nav-hover" href="#">Plateforme</a>
+                <a class="dropdown-item nav-hover" href="#">RPG</a>
+                <a class="dropdown-item nav-hover" href="#">Reflexion</a>
+                <a class="dropdown-item nav-hover" href="#">Shooter</a>
+                <a class="dropdown-item nav-hover" href="#">Simulation</a>
+                <a class="dropdown-item nav-hover" href="#">Sports</a>
+                <a class="dropdown-item nav-hover" href="#">Stratégie</a>
               </div>
             </li>
 
@@ -65,13 +75,13 @@
                 Consoles
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Playstation</a>
-                <a class="dropdown-item" href="#">Xbox</a>
-                <a class="dropdown-item" href="#">Switch</a>
-                <a class="dropdown-item" href="#">Ds</a>
+                <a class="dropdown-item nav-hover" href="#">Playstation</a>
+                <a class="dropdown-item nav-hover" href="#">Xbox</a>
+                <a class="dropdown-item nav-hover" href="#">Switch</a>
+                <a class="dropdown-item nav-hover" href="#">Ds</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Retro</a>
-                <a class="dropdown-item" href="#">Pc</a>
+                <a class="dropdown-item nav-hover" href="#">Retro</a>
+                <a class="dropdown-item nav-hover" href="#">Pc</a>
               </div>
             </li>
             <li class="nav-item dropdown px-2">
@@ -87,9 +97,11 @@
                 Nouveautés
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Dernières sorties</a>
+                <a class="dropdown-item nav-hover" href="#"
+                  >Dernières sorties</a
+                >
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Prochainement</a>
+                <a class="dropdown-item nav-hover" href="#">Prochainement</a>
               </div>
             </li>
           </ul>
@@ -124,8 +136,8 @@
                 <span class="d-none d-xl-inline px-1">Connexion</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Login</a>
-                <a class="dropdown-item" href="#">Register</a>
+                <a class="dropdown-item nav-hover" href="#">Login</a>
+                <a class="dropdown-item nav-hover" href="#">Register</a>
               </div>
             </li>
             <li class="nav-item dropdown px-2">
@@ -141,24 +153,24 @@
                 Fr
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">En</a>
+                <a class="dropdown-item nav-hover" href="#">En</a>
               </div>
             </li>
           </ul>
 
-          <form class="form-inline my-2 my-lg-0 px-2">
+          <form class="form-inline nav-form my-2 my-lg-0 px-2">
             <div class="container">
               <div class="row">
                 <div class="col">
                   <input
-                    class="form-control test mr-sm-1"
+                    class="form-control nav-control mr-sm-1"
                     type="search"
                     placeholder="Search"
                   />
                 </div>
                 <div class="col-pixel-width-40">
                   <button
-                    class="btn btn-outline-success my-2 my-sm-0"
+                    class="btn btn-outline-success my-2 my-sm-0 nav-btn"
                     type="submit"
                   >
                     <font-awesome-icon icon="search" />
