@@ -18,8 +18,10 @@
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active px-2">
               <router-link to="/"
-                ><a class="nav-link" href="#">
-                  <a href="https://fontmeme.com/fr/police-super-mario/"
+                ><a class="nav-link nav-link-logo" href="#">
+                  <a
+                    class="nav-link-logo"
+                    href="https://fontmeme.com/fr/police-super-mario/"
                     ><img
                       class="nav-logo"
                       src="https://fontmeme.com/permalink/210311/d153a1caf571032b6296533249d54f0a.png"
