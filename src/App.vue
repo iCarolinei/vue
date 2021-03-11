@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="navbar">
-      <nav class="navbar navbar-expand-lg navbar-light py-4">
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
         <button
           class="navbar-toggler"
           type="button"
