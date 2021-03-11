@@ -2,8 +2,20 @@
   <div id="app">
     <div id="navbar">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active px-2">
               <router-link to="/"
                 ><a class="nav-link" href="#">Home</a></router-link
@@ -70,8 +82,7 @@
               </div>
             </li>
           </ul>
-
-          <ul class="navbar-nav test">
+          <ul class="navbar-nav nav-color">
             <li class="nav-item active px-2">
               <router-link to="/"
                 ><a class="nav-link" href="#"
@@ -125,12 +136,11 @@
               </div>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0 p-3">
+          <form class="form-inline my-2 my-lg-0 pt-3">
             <input
-              class="form-control mr-sm-2"
+              class="form-control test mr-sm-1"
               type="search"
               placeholder="Search"
-              aria-label="Search"
             />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
               <font-awesome-icon icon="search" />
@@ -139,6 +149,7 @@
         </div>
       </nav>
     </div>
+    <img class="nav-banner" src="./assets/banner.gif" />
     <router-view />
   </div>
 </template>
