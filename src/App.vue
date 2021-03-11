@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="navbar">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light py-4">
         <button
           class="navbar-toggler"
           type="button"
@@ -86,14 +86,16 @@
             <li class="nav-item active px-2">
               <router-link to="/"
                 ><a class="nav-link" href="#"
-                  ><font-awesome-icon icon="shopping-cart" /> Panier</a
+                  ><font-awesome-icon title="Panier" icon="shopping-cart" />
+                  <span class="d-none d-xl-inline px-1">Panier</span></a
                 ></router-link
               >
             </li>
             <li class="nav-item active px-2">
               <router-link to="/test"
                 ><a class="nav-link" href="#"
-                  ><font-awesome-icon icon="map-marker-alt" /> Magasin</a
+                  ><font-awesome-icon title="Magasin" icon="map-marker-alt" />
+                  <span class="d-none d-xl-inline px-1">Magasin</span></a
                 ></router-link
               >
             </li>
@@ -107,7 +109,8 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <font-awesome-icon icon="user-alt" /> Connexion
+                <font-awesome-icon title="Connexion" icon="user-alt" />
+                <span class="d-none d-xl-inline px-1">Connexion</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Action</a>
@@ -136,15 +139,27 @@
               </div>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0 pt-3">
-            <input
-              class="form-control test mr-sm-1"
-              type="search"
-              placeholder="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              <font-awesome-icon icon="search" />
-            </button>
+
+          <form class="form-inline my-2 my-lg-0 px-2">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <input
+                    class="form-control test mr-sm-1"
+                    type="search"
+                    placeholder="Search"
+                  />
+                </div>
+                <div class="col-pixel-width-40">
+                  <button
+                    class="btn btn-outline-success my-2 my-sm-0"
+                    type="submit"
+                  >
+                    <font-awesome-icon icon="search" />
+                  </button>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </nav>
