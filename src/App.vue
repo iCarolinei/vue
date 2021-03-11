@@ -113,10 +113,8 @@
                 <span class="d-none d-xl-inline px-1">Connexion</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Login</a>
+                <a class="dropdown-item" href="#">Register</a>
               </div>
             </li>
             <li class="nav-item dropdown px-2">
