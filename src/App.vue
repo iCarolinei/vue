@@ -37,9 +37,18 @@
                 <router-link to="/test"
                   ><a class="dropdown-item" href="#">Action</a></router-link
                 >
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Aventure</a>
+                <a class="dropdown-item" href="#">Combat</a>
+                <a class="dropdown-item" href="#">Course</a>
+                <a class="dropdown-item" href="#">Education</a>
+                <a class="dropdown-item" href="#">Musique et Rythme</a>
+                <a class="dropdown-item" href="#">Plateforme</a>
+                <a class="dropdown-item" href="#">RPG</a>
+                <a class="dropdown-item" href="#">Reflexion</a>
+                <a class="dropdown-item" href="#">Shooter</a>
+                <a class="dropdown-item" href="#">Simulation</a>
+                <a class="dropdown-item" href="#">Sports</a>
+                <a class="dropdown-item" href="#">Stratégie</a>
               </div>
             </li>
 
@@ -58,8 +67,11 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Playstation</a>
                 <a class="dropdown-item" href="#">Xbox</a>
-                <div class="dropdown-divider">Switch</div>
-                <a class="dropdown-item" href="#"></a>
+                <a class="dropdown-item" href="#">Switch</a>
+                <a class="dropdown-item" href="#">Ds</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Retro</a>
+                <a class="dropdown-item" href="#">Pc</a>
               </div>
             </li>
             <li class="nav-item dropdown px-2">
@@ -75,10 +87,9 @@
                 Nouveautés
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Dernières sorties</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Prochainement</a>
               </div>
             </li>
           </ul>
