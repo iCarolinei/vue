@@ -17,21 +17,20 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active px-2">
-              <router-link to="/"
-                ><a class="nav-link nav-link-logo" href="#">
-                  <a
-                    class="nav-link-logo"
-                    href="https://fontmeme.com/fr/police-super-mario/"
-                    ><img
-                      class="nav-logo"
-                      src="https://fontmeme.com/permalink/210311/d153a1caf571032b6296533249d54f0a.png"
-                      alt="police-super-mario"
-                      border="0" /></a></a
+              <router-link to="/">
+                <a
+                  class="nav-link nav-link-logo"
+                  href="https://fontmeme.com/fr/police-super-mario/"
+                  ><img
+                    class="nav-logo"
+                    src="https://fontmeme.com/permalink/210311/d153a1caf571032b6296533249d54f0a.png"
+                    alt="police-super-mario"
+                    border="0" /></a
               ></router-link>
             </li>
             <li class="nav-item dropdown px-2">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-menu-left dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -43,30 +42,30 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <router-link to="/test"
-                  ><a class="dropdown-item nav-hover" href="#"
+                  ><a class="dropdown-item nav-item-left" href="#"
                     >Action</a
                   ></router-link
                 >
-                <a class="dropdown-item nav-hover" href="#">Aventure</a>
-                <a class="dropdown-item nav-hover" href="#">Combat</a>
-                <a class="dropdown-item nav-hover" href="#">Course</a>
-                <a class="dropdown-item nav-hover" href="#">Education</a>
-                <a class="dropdown-item nav-hover" href="#"
+                <a class="dropdown-item nav-item-left" href="#">Aventure</a>
+                <a class="dropdown-item nav-item-left" href="#">Combat</a>
+                <a class="dropdown-item nav-item-left" href="#">Course</a>
+                <a class="dropdown-item nav-item-left" href="#">Education</a>
+                <a class="dropdown-item nav-item-left" href="#"
                   >Musique et Rythme</a
                 >
-                <a class="dropdown-item nav-hover" href="#">Plateforme</a>
-                <a class="dropdown-item nav-hover" href="#">RPG</a>
-                <a class="dropdown-item nav-hover" href="#">Reflexion</a>
-                <a class="dropdown-item nav-hover" href="#">Shooter</a>
-                <a class="dropdown-item nav-hover" href="#">Simulation</a>
-                <a class="dropdown-item nav-hover" href="#">Sports</a>
-                <a class="dropdown-item nav-hover" href="#">Stratégie</a>
+                <a class="dropdown-item nav-item-left" href="#">Plateforme</a>
+                <a class="dropdown-item nav-item-left" href="#">RPG</a>
+                <a class="dropdown-item nav-item-left" href="#">Reflexion</a>
+                <a class="dropdown-item nav-item-left" href="#">Shooter</a>
+                <a class="dropdown-item nav-item-left" href="#">Simulation</a>
+                <a class="dropdown-item nav-item-left" href="#">Sports</a>
+                <a class="dropdown-item nav-item-left" href="#">Stratégie</a>
               </div>
             </li>
 
             <li class="nav-item dropdown px-2">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-menu-left dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -77,18 +76,18 @@
                 Consoles
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-hover" href="#">Playstation</a>
-                <a class="dropdown-item nav-hover" href="#">Xbox</a>
-                <a class="dropdown-item nav-hover" href="#">Switch</a>
-                <a class="dropdown-item nav-hover" href="#">Ds</a>
+                <a class="dropdown-item nav-item-left" href="#">Playstation</a>
+                <a class="dropdown-item nav-item-left" href="#">Xbox</a>
+                <a class="dropdown-item nav-item-left" href="#">Switch</a>
+                <a class="dropdown-item nav-item-left" href="#">Ds</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-hover" href="#">Retro</a>
-                <a class="dropdown-item nav-hover" href="#">Pc</a>
+                <a class="dropdown-item nav-item-left" href="#">Retro</a>
+                <a class="dropdown-item nav-item-left" href="#">Pc</a>
               </div>
             </li>
             <li class="nav-item dropdown px-2">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-menu-left dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -99,18 +98,20 @@
                 Nouveautés
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-hover" href="#"
+                <a class="dropdown-item nav-item-left" href="#"
                   >Dernières sorties</a
                 >
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-hover" href="#">Prochainement</a>
+                <a class="dropdown-item nav-item-left" href="#"
+                  >Prochainement</a
+                >
               </div>
             </li>
           </ul>
           <ul class="navbar-nav nav-color">
             <li class="nav-item active px-2">
               <router-link to="/"
-                ><a class="nav-link" href="#"
+                ><a class="nav-link nav-menu-right" href="#"
                   ><font-awesome-icon title="Panier" icon="shopping-cart" />
                   <span class="d-none d-xl-inline px-1">Panier</span></a
                 ></router-link
@@ -118,7 +119,7 @@
             </li>
             <li class="nav-item active px-2">
               <router-link to="/test"
-                ><a class="nav-link" href="#"
+                ><a class="nav-link nav-menu-right" href="#"
                   ><font-awesome-icon title="Magasin" icon="map-marker-alt" />
                   <span class="d-none d-xl-inline px-1">Magasin</span></a
                 ></router-link
@@ -126,7 +127,7 @@
             </li>
             <li class="nav-item dropdown px-2">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-menu-right dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -138,13 +139,13 @@
                 <span class="d-none d-xl-inline px-1">Connexion</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-hover" href="#">Login</a>
-                <a class="dropdown-item nav-hover" href="#">Register</a>
+                <a class="dropdown-item nav-item-right" href="#">Login</a>
+                <a class="dropdown-item nav-item-right" href="#">Register</a>
               </div>
             </li>
             <li class="nav-item dropdown px-2">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link nav-menu-right dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -155,7 +156,8 @@
                 Fr
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-hover" href="#">En</a>
+                <a class="dropdown-item nav-item-right" href="#">FR</a>
+                <a class="dropdown-item nav-item-right" href="#">EN</a>
               </div>
             </li>
           </ul>

@@ -36,24 +36,31 @@ body {
     color: white;
     text-decoration: none;
   }
-  a:not(.nav-link-logo):hover {
+
+  .nav-menu-left:hover {
     color: #07bcce;
     background-color: white;
   }
-  ul.nav-color a:hover {
+  .nav-item-left {
+    color: #07bcce !important;
+    background-color: white !important;
+  }
+  .nav-item-left:hover {
+    color: white !important;
+    background-color: #07bcce !important;
+  }
+
+  .nav-menu-right:hover {
     color: #6e3de5;
     background-color: white;
   }
-  .nav-hover {
-    color: #3089d7;
+  .nav-item-right {
+    color: #6e3de5 !important;
+    background-color: white !important;
   }
-  .nav-hover:hover {
-    color: white;
-    background-color: #07bcce;
-  }
-  ul.nav-color a.nav-hover:hover {
-    color: white;
-    background-color:#6e3de5;
+  .nav-item-right:hover {
+    color: white !important;
+    background-color: #6e3de5 !important;
   }
   
 }
