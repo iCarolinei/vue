@@ -7,17 +7,23 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faTwitterSquare, faFacebookSquare, faInstagramSquare, faCcVisa, faCcMastercard, faCcAmex } from '@fortawesome/free-brands-svg-icons'
+import { faShoppingCart, faMapMarkerAlt, faUserAlt, faSearch, faCopyright } from '@fortawesome/free-solid-svg-icons'
 
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faShoppingCart)
-library.add(faMapMarkerAlt )
+library.add(faMapMarkerAlt)
 library.add(faUserAlt)
 library.add(faSearch)
+library.add(faCopyright)
+library.add(faTwitterSquare)
+library.add(faFacebookSquare)
+library.add(faInstagramSquare)
+library.add(faCcVisa)
+library.add(faCcMastercard)
+library.add(faCcAmex)
+
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

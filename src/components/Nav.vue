@@ -18,9 +18,7 @@
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active px-2">
               <router-link to="/">
-                <a
-                  class="nav-link nav-link-logo"
-                  href="https://fontmeme.com/fr/police-super-mario/"
+                <a class="nav-link nav-link-logo" href=""
                   ><img
                     class="nav-logo"
                     src="https://fontmeme.com/permalink/210311/d153a1caf571032b6296533249d54f0a.png"
@@ -41,7 +39,7 @@
                 Catégories
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <router-link to="/test"
+                <router-link to="/register"
                   ><a class="dropdown-item nav-item-left" href="#"
                     >Action</a
                   ></router-link
@@ -118,7 +116,7 @@
               >
             </li>
             <li class="nav-item active px-2">
-              <router-link to="/test"
+              <router-link to="/register"
                 ><a class="nav-link nav-menu-right" href="#"
                   ><font-awesome-icon title="Magasin" icon="map-marker-alt" />
                   <span class="d-none d-xl-inline px-1">Magasin</span></a
@@ -140,7 +138,9 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item nav-item-right" href="#">Login</a>
-                <a class="dropdown-item nav-item-right" href="#">Register</a>
+                <router-link to="/register"
+                  ><a class="dropdown-item nav-item-right" href="#">Register</a>
+                </router-link>
               </div>
             </li>
             <li class="nav-item dropdown px-2">

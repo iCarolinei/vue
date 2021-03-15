@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Test from "../views/Test.vue";
+import Register from "../views/Register.vue";
 
 Vue.use(VueRouter);
 
@@ -12,11 +12,11 @@ const routes = [
     component: Home
   },
   {
-    path: "/test",
-    name: "Test",
-    component: Test
+    path: "/register",
+    name: "Register",
+    component: Register
   }
-  
+
 ];
 
 const router = new VueRouter({
