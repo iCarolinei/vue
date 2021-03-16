@@ -72,8 +72,8 @@
         >
       </div>
       <div class="form-check mt-2 form-valid">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1"
+        <input type="checkbox" class="form-check-input" id="exampleCheck2" />
+        <label class="form-check-label" for="exampleCheck2"
           >Je souhaite recevoir les newsletters et les bons plans
           Spooknick</label
         >
