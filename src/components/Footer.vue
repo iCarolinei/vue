@@ -26,20 +26,19 @@
         <h5 class="card-title d-flex justify-content-center footer-title">
           A propos
         </h5>
-        <div class="d-flex justify-content-center">
-          <div class="card-text footer-text row pt-2">
-            <div class="col-6">
-              <p>* Spooknick</p>
-              <p>* Magasin</p>
-              <p>* Faq</p>
-              <p>* Contact</p>
-            </div>
-            <div class="col-6">
-              <p>* Livraison</p>
-              <p>* Retours</p>
-              <p>* Confidentialité</p>
-              <p>* Conditions générales</p>
-            </div>
+
+        <div class="card-text footer-text row pt-2">
+          <div class="col-6">
+            <p>* Spooknick</p>
+            <p>* Magasin</p>
+            <p>* Faq</p>
+            <p>* Contact</p>
+          </div>
+          <div class="col-6">
+            <p>* Livraison</p>
+            <p>* Retours</p>
+            <p>* Confidentialité</p>
+            <p>* Conditions générales</p>
           </div>
         </div>
       </div>
@@ -70,7 +69,7 @@
         </h5>
         <p class="card-text footer-text pt-2">
           Abonne-toi pour ne jamais rien rater et être au courant des dernières
-          nouveautées! ❤️
+          nouveautées ! ❤️
         </p>
         <div class="d-flex justify-content-center">
           <div class="input-group pt-3 col-8">
