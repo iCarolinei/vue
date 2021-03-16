@@ -3,65 +3,65 @@
     <h1 class="d-flex justify-content-center pt-4 form-title">Register ❤️</h1>
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Prénom</label>
+        <label for="exampleInputName">Prénom</label>
         <input
           type="name"
           class="form-control"
-          id="exampleInputName1"
+          id="exampleInputName"
           aria-describedby="NameHelp"
           placeholder="Inscris ton prénom"
         />
-        <small id="NameHelp" class="form-text text-muted"></small>
+        <small id="SNameHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Nom</label>
+        <label for="exampleInputSecond">Nom</label>
         <input
           type="name"
           class="form-control"
-          id="exampleInputName1"
-          aria-describedby="NameHelp"
+          id="exampleInputSecond"
+          aria-describedby="SNameHelp"
           placeholder="Inscris ton nom"
         />
-        <small id="NameHelp" class="form-text text-muted"></small>
+        <small id="PseudoHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Pseudo</label>
+        <label for="exampleInputPseudo">Pseudo</label>
         <input
           type="name"
           class="form-control"
-          id="exampleInputName1"
-          aria-describedby="NameHelp"
+          id="exampleInputPeusod"
+          aria-describedby="PseudoHelp"
           placeholder="Inscris ton pseudo"
         />
-        <small id="NameHelp" class="form-text text-muted"></small>
+        <small id="EmailHelp" class="form-text text-muted"></small>
       </div>
 
       <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
+        <label for="exampleInputEmail">Email</label>
         <input
           type="email"
           class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
+          id="exampleInputEmail"
+          aria-describedby="EmailHelp"
           placeholder="Inscris ton email"
         />
-        <small id="emailHelp" class="form-text text-muted"></small>
+        <small id="MdpHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Mot de passe</label>
+        <label for="exampleInputMdp">Mot de passe</label>
         <input
           type="password"
           class="form-control"
-          id="exampleInputPassword1"
+          id="exampleInputMdp"
           placeholder="Inscris ton Password"
         />
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Confirme mot de passe</label>
+        <label for="exampleInputMdp2">Confirme mot de passe</label>
         <input
           type="confirmPassword"
           class="form-control"
-          id="exampleInputConfirmPassword1"
+          id="exampleInputMdp2"
           placeholder="Confirme ton mot de passe"
         />
       </div>
