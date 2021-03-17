@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       platform: null,
-      apikey: "{Replace this with HERE API KEY}",
+      apikey: "AIzaSyAhwbLgAUIkAKGLcr_OjYmz5DBxrFhX3Is",
       // You can get the API KEY from developer.here.com
     };
   },
