@@ -96,8 +96,10 @@
                 Nouveautés
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-item-left" href="#"
-                  >Dernières sorties</a
+                <router-link to="/register"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Dernières sorties</a
+                  ></router-link
                 >
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item nav-item-left" href="#"
@@ -137,7 +139,9 @@
                 <span class="d-none d-xl-inline px-1">Connexion</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-item-right" href="#">Login</a>
+                <router-link to="/login"
+                  ><a class="dropdown-item nav-item-right" href="#">Login</a>
+                </router-link>
                 <router-link to="/register"
                   ><a class="dropdown-item nav-item-right" href="#">Register</a>
                 </router-link>
