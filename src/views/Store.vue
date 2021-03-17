@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <Map></Map>
+  <div id="mapstore">
+    <Map :center="center" />
   </div>
 </template>
 
@@ -12,5 +12,15 @@ export default {
   components: {
     Map,
   },
+  data() {
+    return {
+      // we are this as prop to the HereMap component
+      center: {
+        lat: 40.73061,
+        lng: -73.935242,
+      },
+    };
+  },
 };
 </script>
+
