@@ -118,7 +118,7 @@
               >
             </li>
             <li class="nav-item active px-2">
-              <router-link to="/register"
+              <router-link to="/store"
                 ><a class="nav-link nav-menu-right" href="#"
                   ><font-awesome-icon title="Magasin" icon="map-marker-alt" />
                   <span class="d-none d-xl-inline px-1">Magasin</span></a

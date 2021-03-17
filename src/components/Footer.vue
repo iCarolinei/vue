@@ -17,7 +17,7 @@
       <div class="card-footer d-flex justify-content-center footer-link">
         <small class="text-muted footer-link"
           ><font-awesome-icon title="Magasin" icon="copyright" /> Spooknick
-          Games|2021</small
+          Games 2021</small
         >
       </div>
     </div>
