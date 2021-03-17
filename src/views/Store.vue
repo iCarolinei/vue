@@ -1,26 +1,25 @@
 <template>
   <div id="mapstore">
-    <Map :center="center" />
+    <TravelMap class="travel-map" />
   </div>
 </template>
 
 <script>
-import Map from "../components/Map.vue";
-
+//import Map from "../components/GoogleMapLoader.vue";
+import TravelMap from "../components/TravelMap";
 export default {
   name: "Store",
   components: {
-    Map,
-  },
-  data() {
-    return {
-      // we are this as prop to the HereMap component
-      center: {
-        lat: 40.73061,
-        lng: -73.935242,
-      },
-    };
+    TravelMap,
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.travel-map {
+  height: 400px;
+}
+</style>
+
+
 
