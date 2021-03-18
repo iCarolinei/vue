@@ -32,10 +32,10 @@
         <div class="card-text footer-text row pt-2">
           <div class="col-6">
             <ul>
-              <li>* Spooknick</li>
+              <router-link to="/spooknick"><li>* Spooknick</li></router-link>
               <router-link to="/store"><li>* Magasin</li></router-link>
               <li>* Faq</li>
-              <li>* Contact</li>
+              <router-link to="/contact"><li>* Contact</li></router-link>
             </ul>
           </div>
           <div class="col-6">

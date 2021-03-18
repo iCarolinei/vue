@@ -4,6 +4,10 @@ import Home from "../views/Home.vue";
 import Store from "../views/Store.vue"
 import Login from "../views/Login.vue"
 import Register from "../views/Register.vue";
+import Spooknick from "../views/Spooknick.vue";
+
+import Contact from "../views/Contact.vue";
+
 import Games from "../views/Games.vue";
 Vue.use(VueRouter);
 
@@ -27,6 +31,16 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login
+  },
+  {
+    path: "/spooknick",
+    name: "Spooknick",
+    component: Spooknick
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact
   },
   {
     path: '/games/:filterType/:filterValue',

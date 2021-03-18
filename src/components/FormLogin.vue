@@ -3,22 +3,22 @@
     <div class="form">
       <h1 class="d-flex justify-content-center pt-4 form-title">Login ❤️</h1>
       <div class="form-group">
-        <label for="exampleInputEmail1c">Email address</label>
+        <label for="exampleInputEmail1c">Email</label>
         <input
           type="email"
           class="form-control"
           id="exampleInputEmail1c"
           aria-describedby="emailHelp"
-          placeholder="Enter email"
+          placeholder="Inscris ton email"
         />
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1a">Password</label>
+        <label for="exampleInputPassword1a">Mot de passe</label>
         <input
           type="password"
           class="form-control"
           id="exampleInputPassword1a"
-          placeholder="Password"
+          placeholder="Inscris ton mot de passe"
         />
       </div>
       <div class="form-group form-check mt-4 form-valid">

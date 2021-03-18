@@ -5,9 +5,9 @@
         Magasin ❤️
       </h1>
       <Map class="map" />
-      <h4 class="pt-4 pb-4 d-flex justify-content-center map-title">
+      <h5 class="pt-4 pb-2 d-flex justify-content-center map-title">
         Ou nous trouver ?
-      </h4>
+      </h5>
       <div class="d-flex justify-content-center">
         <ul class="pb-4 d-flex flex-column">
           <li>* Spooknick Games</li>

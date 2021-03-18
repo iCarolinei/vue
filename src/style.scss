@@ -123,9 +123,11 @@ li {
 }
 
 .map-store{
+  li {
+    font-size: 0.8rem;
+  }
   .map-title {
     font-style: italic;
-    font-weight: 500;
     color: #07bcce;
   }
 

@@ -53,7 +53,7 @@
           type="password"
           class="form-control"
           id="exampleInputMdp"
-          placeholder="Inscris ton Password"
+          placeholder="Inscris ton mot de passe"
         />
       </div>
       <div class="form-group">
