@@ -1,15 +1,40 @@
 <template>
-  <div class="card">
+  <div class="card about-spooknick">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
+      <h2 class="card-title border-bottom d-flex justify-content-center py-4">
+        Mais qui sommes-nous, enfait ? 🎮
+      </h2>
+      <p class="card-text d-flex justify-content-center pt-4 pb-2">
+        <span class="about-style"
+          >— Les jeux vidéos, c'est l'histoire de toute une vie. Plus qu'un
+          passion, ca finit par faire partie de nous, de notre vie. Alors qui de
+          mieux placé pour vous parlez de ce que nous connaissons vraiment
+          ?</span
+        >
       </p>
-      <p class="card-text">
-        <small class="text-muted">Last updated 3 mins ago</small>
+      <p class="about-text">
+        <span class="about-letter">L'</span>aventure commença un jour comme un
+        autre sauf pour nous, évidement. Jeunes motivés et geeks, à la recherche
+        de nouveaux défis, nous décidame de monter notre propre start-up contre
+        vents et marées. Ce ne fut pas de tout repos mais nous y sommes parvenu:
+        nous avons pu conctrétiser notre rêve de toujours.
+      </p>
+      <p>
+        <span class="about-letter-color"
+          >Nous sommes un petit magasin de jeux vidéo liègeois</span
+        >
+        qui a à coeur de bien faire et qui non seulement vend des jeux, et te
+        permet de jouer sur des bornes d'arcades/consoles entre amis mais nous
+        organisons également des tournois de tes jeux préférés. Depuis janvier
+        2021, nous avons le plaisir de te servir, toi notre client fidèle.
+        <span class="about-letter-color">
+          Merci infiniment de nous soutenir car sans vous, nous n'en serions pas
+          la. Ci-dessous, un apercu des services que nous pouvons te
+          proposer.</span
+        >
       </p>
     </div>
+
     <div>
       <b-carousel
         id="carousel-1"

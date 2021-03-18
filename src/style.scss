@@ -6,7 +6,9 @@ body, html {
 h1 {
   color:#6e3de5 !important;
 }
-
+h2 {
+  color:#07bcce !important;
+}
 li {
   list-style-type: none;
   text-decoration: none;
@@ -132,4 +134,24 @@ li {
   }
 
 
+}
+
+//About Spooknick Games
+.about-spooknick {
+  .about-style {
+    font-style: italic;
+    color: grey;
+    font-size: 0.8rem;
+  }
+  .about-text {
+    font-size: 0.9rem;
+  }
+  .about-letter {
+font-size: 1.5rem;
+
+color: grey;
+  }
+  .about-letter-color {
+    color:#3089d7;
+  }
 }
