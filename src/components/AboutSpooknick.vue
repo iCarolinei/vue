@@ -1,6 +1,6 @@
 <template>
   <div class="card about-spooknick">
-    <div class="card-body">
+    <div class="card-body container">
       <h2 class="card-title border-bottom d-flex justify-content-center py-4">
         Mais qui sommes-nous, enfait ? 🎮
       </h2>
@@ -44,20 +44,20 @@
         indicators
         background="#ababab"
         img-width="1024"
-        img-height="400"
+        img-height="300"
         style="text-shadow: 1px 1px 2px #333"
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
         <b-carousel-slide
-          img-src="https://picsum.photos/1024/400?grayscale"
+          img-src="https://picsum.photos/1024/300?grayscale"
         ></b-carousel-slide>
 
-        <b-carousel-slide img-src="https://picsum.photos/1024/400">
+        <b-carousel-slide img-src="https://picsum.photos/1024/300">
         </b-carousel-slide>
 
         <b-carousel-slide
-          img-src="https://picsum.photos/1024/400/?image=58"
+          img-src="https://picsum.photos/1024/300/?image=58"
         ></b-carousel-slide>
 
         <b-carousel-slide>
@@ -66,7 +66,7 @@
               class="d-block img-fluid w-100"
               width="1024"
               height="480"
-              src="https://picsum.photos/1024/400/?image=55"
+              src="https://picsum.photos/1024/300/?image=55"
               alt="image slot"
             />
           </template>
