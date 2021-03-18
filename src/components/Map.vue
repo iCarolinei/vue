@@ -50,10 +50,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-#mapContainer {
-  width: 100vw;
-  height: 100vh;
-}
-</style>

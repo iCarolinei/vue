@@ -39,12 +39,25 @@
                 Catégories
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <router-link to="/register"
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Action' },
+                  }"
                   ><a class="dropdown-item nav-item-left" href="#"
                     >Action</a
                   ></router-link
                 >
-                <a class="dropdown-item nav-item-left" href="#">Aventure</a>
+
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Aventure' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Aventure</a
+                  ></router-link
+                >
                 <a class="dropdown-item nav-item-left" href="#">Combat</a>
                 <a class="dropdown-item nav-item-left" href="#">Course</a>
                 <a class="dropdown-item nav-item-left" href="#">Education</a>

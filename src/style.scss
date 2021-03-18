@@ -7,27 +7,15 @@ h1 {
   color:#6e3de5 !important;
 }
 
-//Responsive Browser
-@media all and (min-width: 1024px) {
-  .nav-banner {
-    width: 100%;
-    height: 40em;
-  } 
-  
+li {
+  list-style-type: none;
+  text-decoration: none;
 }
-
-  //Responsive other
-    @media all and (max-width: 1023px) {
-      .nav-banner{
-      width: 100%;
-      height: auto;
-    } 
-  }
 
 /*Navbar*/
 #navbar {
   background: linear-gradient(0.25turn, #07bcce, #3089d7, #6e3de5);
-
+  
   .nav-logo {
     width: 180px;
     -webkit-transform: scale(1);
@@ -86,24 +74,31 @@ h1 {
   }
   
 }
-
+.nav-banner{
+  width: 100%;
+  height: auto;
+} 
 /*Footer*/
 .footer {
   background: linear-gradient(  #07bcce, #3089d7, #6e3de5 ) !important;
   color: white !important;
-  font-size: 20px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   .footer-link {
   color: white !important;
-  
+ 
  
   }
   .footer-title {
-    font-size: 16px !important;
+    font-size: 1rem !important;
     font-style: italic;
     font-weight: bold;
   }
   .footer-text {
-    font-size: 13px !important;
+    font-size: 0.8rem !important;
 
 
    }
@@ -120,4 +115,19 @@ h1 {
   color: #3089d7 !important;
  }}
 
+ //Map
+ #mapContainer {
+  width: 100vw;
+  height: 70vh;
  
+}
+
+.map-store{
+  .map-title {
+    font-style: italic;
+    font-weight: 500;
+    color: #07bcce;
+  }
+
+
+}

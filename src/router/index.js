@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import Store from "../views/Store.vue"
 import Login from "../views/Login.vue"
 import Register from "../views/Register.vue";
-
+import Games from "../views/Games.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -27,6 +27,12 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login
+  },
+  {
+    path: '/games/:filterType/:filterValue',
+    name: "Games",
+    props: true,
+    component: Games
   }
 
 ];

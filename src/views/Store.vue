@@ -1,31 +1,35 @@
 <template>
-  <div id="mapstore">
-    <h1 class="d-flex justify-content-center pt-4 pb-4 form-title">
-      Magasin ❤️
-    </h1>
-    <!--<TravelMap class="travel-map" />-->
-    <Map class="map" />
+  <div class="map-store">
+    <div id="mapstore">
+      <h1 class="d-flex justify-content-center pt-4 pb-4 form-title">
+        Magasin ❤️
+      </h1>
+      <Map class="map" />
+      <h4 class="pt-4 pb-4 d-flex justify-content-center map-title">
+        Ou nous trouver ?
+      </h4>
+      <div class="d-flex justify-content-center">
+        <ul class="pb-4 d-flex flex-column">
+          <li>* Spooknick Games</li>
+          <li>* Rue unlucky, 52</li>
+          <li>* 4000, Liège</li>
+          <li>* Viens comme tu es ! 😉</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-//import Map from "../components/GoogleMapLoader.vue";
-// import TravelMap from "../components/TravelMap";
 import Map from "../components/Map";
 export default {
   name: "Store",
   components: {
-    //TravelMap,
     Map,
   },
 };
 </script>
 
-<style lang="scss" scoped>
-.travel-map {
-  height: 400px;
-}
-</style>
 
 
 

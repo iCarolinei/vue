@@ -7,10 +7,12 @@
         </h5>
         <div class="d-flex justify-content-center">
           <div class="card-text footer-text pt-2">
-            <p>* Univers playstation</p>
-            <p>* Univers xbox</p>
-            <p>* Univers nintendo</p>
-            <p>* Univers rétro</p>
+            <ul>
+              <li>* Univers playstation</li>
+              <li>* Univers xbox</li>
+              <li>* Univers nintendo</li>
+              <li>* Univers rétro</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -29,16 +31,20 @@
 
         <div class="card-text footer-text row pt-2">
           <div class="col-6">
-            <p>* Spooknick</p>
-            <p>* Magasin</p>
-            <p>* Faq</p>
-            <p>* Contact</p>
+            <ul>
+              <li>* Spooknick</li>
+              <router-link to="/store"><li>* Magasin</li></router-link>
+              <li>* Faq</li>
+              <li>* Contact</li>
+            </ul>
           </div>
           <div class="col-6">
-            <p>* Livraison</p>
-            <p>* Retours</p>
-            <p>* Confidentialité</p>
-            <p>* Conditions générales</p>
+            <ul>
+              <li>* Livraison</li>
+              <li>* Retours</li>
+              <li>* Confidentialité</li>
+              <li>* Conditions générales</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -72,7 +78,7 @@
           nouveautées ! ❤️
         </p>
         <div class="d-flex justify-content-center">
-          <div class="input-group pt-3 col-8">
+          <div class="input-group pt-2 col-8">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">@</span>
             </div>
