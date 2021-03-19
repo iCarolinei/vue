@@ -34,7 +34,7 @@
             <ul>
               <router-link to="/spooknick"><li>* Spooknick</li></router-link>
               <router-link to="/store"><li>* Magasin</li></router-link>
-              <li>* Faq</li>
+              <router-link to="/faq"><li>* Faq</li></router-link>
               <router-link to="/contact"><li>* Contact</li></router-link>
             </ul>
           </div>

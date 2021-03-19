@@ -5,6 +5,7 @@ import Store from "../views/Store.vue"
 import Login from "../views/Login.vue"
 import Register from "../views/Register.vue";
 import Spooknick from "../views/Spooknick.vue";
+import Faq from "../views/Faq.vue";
 
 import Contact from "../views/Contact.vue";
 
@@ -36,6 +37,11 @@ const routes = [
     path: "/spooknick",
     name: "Spooknick",
     component: Spooknick
+  },
+  {
+    path: "/faq",
+    name: "Faq",
+    component: Faq
   },
   {
     path: "/contact",
