@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTwitterSquare, faFacebookSquare, faInstagramSquare, faCcVisa, faCcMastercard, faCcAmex } from '@fortawesome/free-brands-svg-icons'
-import { faShoppingCart, faMapMarkerAlt, faUserAlt, faSearch, faCopyright, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faMapMarkerAlt, faUserAlt, faSearch, faCopyright, faLink, faCreditCard } from '@fortawesome/free-solid-svg-icons'
 
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -25,7 +25,7 @@ library.add(faInstagramSquare)
 library.add(faCcVisa)
 library.add(faCcMastercard)
 library.add(faCcAmex)
-
+library.add(faCreditCard)
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

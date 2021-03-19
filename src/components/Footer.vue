@@ -41,7 +41,7 @@
           <div class="col-6">
             <ul>
               <router-link to="/delivery"><li>* Livraison</li></router-link>
-              <li>* Paiements</li>
+              <router-link to="/payment"><li>* Paiements</li></router-link>
               <li>* Confidentialité</li>
               <li>* Conditions générales</li>
             </ul>
