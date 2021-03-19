@@ -2,8 +2,10 @@
   <div class="card">
     <div class="card-body border-left border-right container">
       <h1 class="d-flex justify-content-center pt-1 form-title">Faq ❤️</h1>
-      <h4 class="card-title border-bottom d-flex justify-content-center py-4">
-        Qestions courantes
+      <h4
+        class="card-title border-bottom d-flex justify-content-center py-3 text-secondary"
+      >
+        Questions courantes
       </h4>
       <div class="d-flex justify-content-center">
         <b-dropdown
@@ -76,7 +78,9 @@
         </div>
       </div>
 
-      <h4 class="card-title border-bottom d-flex justify-content-center py-4">
+      <h4
+        class="card-title border-bottom d-flex justify-content-center py-4 text-secondary"
+      >
         Gestion des données personnelles
       </h4>
       <div class="d-flex justify-content-center">
@@ -149,7 +153,9 @@
           </b-dropdown>
         </div>
       </div>
-      <h4 class="card-title border-bottom d-flex justify-content-center py-4">
+      <h4
+        class="card-title border-bottom d-flex justify-content-center py-4 text-secondary"
+      >
         Livraison et retour
       </h4>
       <div class="d-flex justify-content-center">
@@ -204,7 +210,9 @@
           </b-dropdown-text>
         </b-dropdown>
       </div>
-      <h5 class="card-title border-bottom d-flex justify-content-center py-4">
+      <h5
+        class="card-title border-bottom d-flex justify-content-center py-4 text-secondary"
+      >
         Pour toutes autres questions, n'hésite pas de nous contactez sur les
         réseaux 😉
       </h5>

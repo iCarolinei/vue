@@ -40,8 +40,8 @@
           </div>
           <div class="col-6">
             <ul>
-              <li>* Livraison</li>
-              <li>* Retours</li>
+              <router-link to="/delivery"><li>* Livraison</li></router-link>
+              <li>* Paiements</li>
               <li>* Confidentialité</li>
               <li>* Conditions générales</li>
             </ul>

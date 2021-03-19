@@ -6,6 +6,7 @@ import Login from "../views/Login.vue"
 import Register from "../views/Register.vue";
 import Spooknick from "../views/Spooknick.vue";
 import Faq from "../views/Faq.vue";
+import Delivery from "../views/Delivery.vue";
 
 import Contact from "../views/Contact.vue";
 
@@ -47,6 +48,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact
+  },
+  {
+    path: "/delivery",
+    name: "Delivery",
+    component: Delivery
   },
   {
     path: '/games/:filterType/:filterValue',
