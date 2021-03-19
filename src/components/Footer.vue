@@ -42,8 +42,12 @@
             <ul>
               <router-link to="/delivery"><li>* Livraison</li></router-link>
               <router-link to="/payment"><li>* Paiements</li></router-link>
-              <li>* Confidentialité</li>
-              <li>* Conditions générales</li>
+              <router-link to="/confidentialityGlobal"
+                ><li>* Confidentialité</li></router-link
+              >
+              <router-link to="/conditionGlobal"
+                ><li>* Conditions générales</li></router-link
+              >
             </ul>
           </div>
         </div>

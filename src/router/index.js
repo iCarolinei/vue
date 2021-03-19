@@ -9,6 +9,8 @@ import Faq from "../views/Faq.vue";
 import Delivery from "../views/Delivery.vue";
 import Contact from "../views/Contact.vue";
 import Payment from "../views/Payment.vue";
+import ConditionGlobal from "../views/ConditionGlobal.vue";
+import ConfidentialityGlobal from "../views/ConfidentialityGlobal.vue";
 
 import Games from "../views/Games.vue";
 Vue.use(VueRouter);
@@ -58,6 +60,16 @@ const routes = [
     path: "/payment",
     name: "Payment",
     component: Payment
+  },
+  {
+    path: "/conditionGlobal",
+    name: "ConditionGlobal",
+    component: ConditionGlobal
+  },
+  {
+    path: "/confidentialityGlobal",
+    name: "ConfidentialityGlobal",
+    component: ConfidentialityGlobal
   },
   {
     path: '/games/:filterType/:filterValue',

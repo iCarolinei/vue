@@ -9,10 +9,11 @@
         🎮 Ou nous trouver ?
       </h5>
       <div class="d-flex justify-content-center">
-        <ul class="pb-4 d-flex flex-column">
+        <ul class="pb-2 d-flex flex-column">
           <li>Spooknick Games</li>
           <li>Rue unlucky, 52</li>
           <li>4000, Liège</li>
+          <li>0465 xx xx xx</li>
         </ul>
       </div>
     </div>
