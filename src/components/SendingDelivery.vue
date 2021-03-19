@@ -7,41 +7,67 @@
       <h4
         class="card-title border-bottom d-flex justify-content-center py-3 text-primary"
       >
-        Qestions courantes
+        Tu as 14 jours pour renvoyer ton colis après livraison
       </h4>
-      <p class="card-text d-flex justify-content-center pt-4 pb-2">
-        <span class="about-style"
-          >— Les jeux vidéos, c'est l'histoire de toute une vie. Plus qu'un
-          passion, ça fini par faire partie de nous, de notre vie. Alors qui de
-          mieux placé pour vous parlez de ce que nous connaissons vraiment
-          ?</span
-        >
-      </p>
-      <p class="about-text">
-        <span class="about-letter">L'</span>aventure commença un jour comme un
-        autre sauf pour nous, évidemment. Jeunes motivés et geeks, à la
-        recherche de nouveaux défis, nous décidames de monter notre propre
-        start-up contre vents et marées. Ce ne fût pas de tout repos mais nous y
-        sommes parvenu: nous avons pu concrétiser notre rêve de toujours.
-      </p>
-      <p>
-        <span class="about-letter-color"
-          >Nous sommes un petit magasin de jeux vidéo liègeois</span
-        >
-        qui a à coeur de bien faire et qui non seulement vend des jeux, et te
-        permet de jouer sur des bornes d'arcades/consoles entre amis mais nous
-        organisons également des tournois de tes jeux préférés. Depuis janvier
-        2021, nous avons le plaisir de te servir, toi notre client fidèle.
-        <span class="about-letter-color">
-          Merci infiniment de nous soutenir car sans vous, nous n'en serions pas
-          la. Ci-dessous, un apercu des services que nous pouvons te
-          proposer.</span
-        >
-        😉
-      </p>
+
+      <div class="about-text pt-4 pb-2">
+        <p>
+          🚚 La loi belge sur les pratiques commerciales et sur l'information et
+          la protection du consommateur du 14 juillet 1991 autorise le
+          consommateur à notifier le vendeur qu'il/elle renonce à son achat dans
+          les 14 jours ouvrables qui suivent la date de livraison ou de la
+          conclusion du contrat.
+        </p>
+      </div>
+      <h4
+        class="card-title border-bottom d-flex justify-content-center py-3 text-primary"
+      >
+        Modes de livraison
+      </h4>
+
+      <div class="about-text pt-4 pb-2">
+        <ul>
+          <li>
+            <span class="text-primary">• Chronopost 13H :</span> 11.71€
+            Livraison le lendemain avant 13h, du lundi au vendredi (pas le
+            samedi) en France après expédition de votre commande.
+          </li>
+          <li class="pt-2">
+            <span class="text-primary">• Colissimo :</span> 7.80€ Livraison sous
+            48H à domicile en France après expédition de votre commande.
+          </li>
+          <li class="pt-2">
+            <span class="text-primary"> • Chrono Relais 13 :</span> 7.39€
+            Livraison sous 2 jours en point relais en France après expédition de
+            ta commande. Gratuit au dela de 100€ de commande Livraison en
+            Europe.
+          </li>
+          <li class="pt-2">
+            <span class="text-primary">• Colissimo International :</span>
+            Livraison comprise entre 3 et 5 jours selon la zone après expédition
+            de ta commande.
+          </li>
+        </ul>
+      </div>
+      <h4
+        class="card-title border-bottom d-flex justify-content-center py-3 text-primary"
+      >
+        Retour
+      </h4>
+
+      <div class="about-text pt-4 pb-2">
+        <p>
+          📦 Tu peux renvoyer les articles correctement emballés et affranchis
+          par poste à Rue unlucky, 52, 4000 Belgique, Belgique. Il faut joindre
+          une copie de votre facture et joindre toutes les coordonnées bancaires
+          nécessaires. A la réception de ton colis, une note de crédit vous sera
+          établie et les articles te seront remboursés. Spooknick games
+          n'effectue aucun échange.
+        </p>
+      </div>
     </div>
 
-    <img class="img-footer" src="../assets/gta.jpg" />
+    <img class="img-footer" src="../assets/deathStranding.jpg" />
   </div>
 </template>
 

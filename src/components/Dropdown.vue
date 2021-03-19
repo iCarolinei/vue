@@ -210,12 +210,12 @@
           </b-dropdown-text>
         </b-dropdown>
       </div>
-      <h5
+      <h6
         class="card-title border-bottom d-flex justify-content-center py-4 text-secondary"
       >
         Pour toutes autres questions, n'hésite pas de nous contactez sur les
         réseaux 😉
-      </h5>
+      </h6>
       <div class="d-flex justify-content-center py-3">
         <small class="text-muted">
           <a href="https://twitter.com">
