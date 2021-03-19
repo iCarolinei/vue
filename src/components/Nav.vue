@@ -42,24 +42,30 @@
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Action' },
-                  }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Action</a
-                  ></router-link
-                >
-
-                <router-link
-                  :to="{
-                    name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Aventure' },
+                    params: { filterType: 'Genre', filterValue: 'Adventure' },
                   }"
                   ><a class="dropdown-item nav-item-left" href="#"
                     >Aventure</a
                   ></router-link
                 >
-                <a class="dropdown-item nav-item-left" href="#">Combat</a>
-                <a class="dropdown-item nav-item-left" href="#">Course</a>
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Fighting' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Combat</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Racing' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Course</a
+                  ></router-link
+                >
                 <a class="dropdown-item nav-item-left" href="#">Education</a>
                 <a class="dropdown-item nav-item-left" href="#"
                   >Musique et Rythme</a
@@ -204,7 +210,7 @@
       </nav>
     </div>
     <img class="nav-banner" src="../assets/banner.gif" />
-    <router-view />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 

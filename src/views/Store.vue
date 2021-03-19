@@ -6,14 +6,13 @@
       </h1>
       <Map class="map" />
       <h5 class="pt-4 pb-2 d-flex justify-content-center map-title">
-        Ou nous trouver ?
+        🎮 Ou nous trouver ?
       </h5>
       <div class="d-flex justify-content-center">
         <ul class="pb-4 d-flex flex-column">
-          <li>* Spooknick Games</li>
-          <li>* Rue unlucky, 52</li>
-          <li>* 4000, Liège</li>
-          <li>* Viens comme tu es ! 😉</li>
+          <li>Spooknick Games</li>
+          <li>Rue unlucky, 52</li>
+          <li>4000, Liège</li>
         </ul>
       </div>
     </div>

@@ -1,23 +1,23 @@
 <template>
   <div class="card about-spooknick">
-    <div class="card-body container">
+    <div class="card-body border-left border-right container">
       <h2 class="card-title border-bottom d-flex justify-content-center py-4">
-        Mais qui sommes-nous, enfait ? 🎮
+        Mais qui sommes-nous, en fait ? 🎮
       </h2>
       <p class="card-text d-flex justify-content-center pt-4 pb-2">
         <span class="about-style"
           >— Les jeux vidéos, c'est l'histoire de toute une vie. Plus qu'un
-          passion, ca finit par faire partie de nous, de notre vie. Alors qui de
+          passion, ça fini par faire partie de nous, de notre vie. Alors qui de
           mieux placé pour vous parlez de ce que nous connaissons vraiment
           ?</span
         >
       </p>
       <p class="about-text">
         <span class="about-letter">L'</span>aventure commença un jour comme un
-        autre sauf pour nous, évidement. Jeunes motivés et geeks, à la recherche
-        de nouveaux défis, nous décidame de monter notre propre start-up contre
-        vents et marées. Ce ne fut pas de tout repos mais nous y sommes parvenu:
-        nous avons pu conctrétiser notre rêve de toujours.
+        autre sauf pour nous, évidemment. Jeunes motivés et geeks, à la
+        recherche de nouveaux défis, nous décidames de monter notre propre
+        start-up contre vents et marées. Ce ne fût pas de tout repos mais nous y
+        sommes parvenu: nous avons pu concrétiser notre rêve de toujours.
       </p>
       <p>
         <span class="about-letter-color"
@@ -32,6 +32,7 @@
           la. Ci-dessous, un apercu des services que nous pouvons te
           proposer.</span
         >
+        😉
       </p>
     </div>
 
@@ -39,7 +40,7 @@
       <b-carousel
         id="carousel-1"
         v-model="slide"
-        :interval="4000"
+        :interval="3000"
         controls
         indicators
         background="#ababab"

@@ -9,9 +9,10 @@ export default class Igdb {
     TwitchTokenUrl = "https://id.twitch.tv/oauth2/token";
     Url = "https://blooming-savannah-76505.herokuapp.com/https://api.igdb.com/v4/"
 
-    constructor(client_id, client_secret) {
-        this.Client_id = client_id;
-        this.Client_secret = client_secret;
+
+    constructor() {
+        this.Client_id = "sayhrtdt1r6m4g5c8mjj34cz4u9ktk";
+        this.Client_secret = "6sjje1v6hv0exicx0sy14jhxu847ix";
     }
 
     async getToken() {
@@ -35,38 +36,48 @@ export default class Igdb {
         }
 
     }
-
-    async getGamesByGenre(name) {
-        await this.EnsureConnected();
-
-        let genre = this.Genres.find(x => x.name === name);
-        if (genre === undefined) return null;
-
-        let data = "fields *; where genres = (" + genre["id"] + ");";
-
-        let payload = {
+    getPayload() {
+        return {
             headers: {
                 "Client-ID": this.Client_id,
                 Authorization: "Bearer " + this.Token,
             }
         };
+    }
 
-        let result = await axios.post(this.Url + "games", data, payload);
+    async getGamesByGenre(name) {
+        console.log("getGamesByGenre with genre " + name);
+        await this.EnsureConnected();
 
-        console.log(result.data);
+        let genre = this.Genres.find(x => x.name === name);
+        if (genre === undefined) return null;
 
+        let data = "fields name,summary,url,screenshots.*; where genres = (" + genre["id"] + ");limit 500; sort name;";
+
+        let games = await axios.post(this.Url + "games", data, this.getPayload());
+        games = games.data;
+
+
+        console.log(games);
+        return games;
 
 
     }
 
+
+
     Genres = [
+        {
+            id: 2,
+            name: "Point-and-click"
+        },
         {
             id: 4,
             name: "Fighting"
         },
         {
             id: 5,
-            name: "FPS"
+            name: "Shooter"
         },
         {
             id: 7,
@@ -86,11 +97,11 @@ export default class Igdb {
         },
         {
             id: 11,
-            name: "RTS"
+            name: "Real Time Strategy (RTS)"
         },
         {
             id: 12,
-            name: "RPG"
+            name: "Role-playing (RPG)"
         },
         {
             id: 13,
@@ -99,6 +110,54 @@ export default class Igdb {
         {
             id: 14,
             name: "Sport"
+        },
+        {
+            id: 15,
+            name: "Strategy"
+        },
+        {
+            id: 16,
+            name: "Turn-based strategy (TBS)"
+        },
+        {
+            id: 24,
+            name: "Tactical"
+        },
+        {
+            id: 25,
+            name: "Hack and slash/Beat 'em up"
+        },
+        {
+            id: 26,
+            name: "Quiz/Trivia"
+        },
+        {
+            id: 30,
+            name: "Pinball"
+        },
+        {
+            id: 31,
+            name: "Adventure"
+        },
+        {
+            id: 32,
+            name: "Indie"
+        },
+        {
+            id: 33,
+            name: "Arcade"
+        },
+        {
+            id: 34,
+            name: "Visual Novel"
+        },
+        {
+            id: 35,
+            name: "Card & Board Game"
+        },
+        {
+            id: 36,
+            name: "MOBA"
         }
     ]
 
