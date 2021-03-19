@@ -204,6 +204,32 @@
           </b-dropdown-text>
         </b-dropdown>
       </div>
+      <h5 class="card-title border-bottom d-flex justify-content-center py-4">
+        Pour toutes autres questions, n'hésite pas de nous contactez sur les
+        réseaux 😉
+      </h5>
+      <div class="d-flex justify-content-center py-3">
+        <small class="text-muted">
+          <a href="https://twitter.com">
+            <font-awesome-icon
+              class="mx-4 dropdown-social"
+              title="Twitter"
+              :icon="['fab', 'twitter-square']"
+          /></a>
+          <a href="https://facebook.com">
+            <font-awesome-icon
+              class="mx-4 dropdown-social"
+              title="Facebook"
+              :icon="['fab', 'facebook-square']"
+            />
+          </a>
+          <a href="https://instagram.com">
+            <font-awesome-icon
+              class="mx-4 dropdown-social"
+              title="Instagram"
+              :icon="['fab', 'instagram-square']" /></a
+        ></small>
+      </div>
     </div>
     <img class="img-footer" src="../assets/gta.jpg" />
   </div>
