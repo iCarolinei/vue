@@ -9,8 +9,7 @@ export default class Igdb {
 
     TwitchTokenUrl = "https://id.twitch.tv/oauth2/token";
     Url = "https://blooming-savannah-76505.herokuapp.com/https://api.igdb.com/v4/"
-    GamesData = "fields name,summary,url,cover.*,platforms.*;  sort name; "
-
+    GamesData = "fields name,summary,url,cover.*,platforms.*,rating,first_release_date;"
 
     constructor() {
         this.Client_id = "sayhrtdt1r6m4g5c8mjj34cz4u9ktk";
@@ -36,8 +35,8 @@ export default class Igdb {
         if (this.Token === null || this.Expired_at < new Date()) {
             await this.getToken();
         }
-
     }
+
     getPayload() {
         return {
             headers: {
@@ -47,28 +46,52 @@ export default class Igdb {
         };
     }
 
-    async getGames(filter, page, pageSize) {
-        let range = " limit " + pageSize + ";";
+    mapSort(sort) {
+        switch (sort) {
+            case 'Name':
+                return "name";
+            case 'Date':
+                return "first_release_date";
+            case 'Rating':
+                return "rating";
+            default:
+                return "name";
+        }
+    }
+
+    async getGames(filter, page, pageSize, sort, sortOrder) {
+        sort = this.mapSort(sort);
+        let range = ` limit ${pageSize};`;
         if (page > 0)
-            range += " offset " + (page * pageSize) + ";";
-        let games = await axios.post(this.Url + "games", this.GamesData + filter + range, this.getPayload());
+            range += ` offset ${(page * pageSize)} ;`;
+
+        if (sort === "first_release_date" && sortOrder === "desc") {
+            filter = "first_release_date > 0 & " + filter;
+        }
+
+        if (sort === "rating" && sortOrder === "desc") {
+            filter = "rating_count > 0 & " + filter;
+        }
+
+        filter = " where " + filter;
+
+        let data = this.GamesData + filter + range + ` sort ${sort} ${sortOrder};`
+        let games = await axios.post(this.Url + "games", data, this.getPayload());
         games = games.data;
-        //console.log(games);
+
         return games;
     }
 
-    async getGamesByGenre(name, page, pageSize) {
-        //console.log("getGamesByGenre with name " + name);
+    async getGamesByGenre(name, page, pageSize, sort, sortOrder) {
         await this.EnsureConnected();
 
         let genre = this.Genres.find(x => x.name === name);
         if (genre === undefined) return null;
 
-        return this.getGames("where genres = (" + genre["id"] + ");", page, pageSize);
+        return this.getGames("genres = (" + genre["id"] + ");", page, pageSize, sort, sortOrder);
     }
 
-    async getGamesByPlatform(name, page, pageSize) {
-        //console.log("getGamesByPlatform with name " + name);
+    async getGamesByPlatform(name, page, pageSize, sort, sortOrder) {
         await this.EnsureConnected();
 
         let platforms = [];
@@ -90,7 +113,7 @@ export default class Igdb {
         }
         platforms = this.Platforms.filter(p => platforms.includes(p.name));
         let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
-        return this.getGames("where platforms = (" + platformIds.join(',') + ");", page, pageSize);
+        return this.getGames("platforms = (" + platformIds.join(',') + ");", page, pageSize, sort, sortOrder);
     }
 
     Genres = [

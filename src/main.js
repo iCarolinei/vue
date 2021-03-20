@@ -35,6 +35,10 @@ Vue.use(IconsPlugin);
 
 Vue.prototype.$IgdbService = new Igdb();
 
+import { func } from './func.js'
+
+Vue.prototype.$func = func;
+
 Vue.config.productionTip = false;
 
 new Vue({

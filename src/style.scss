@@ -25,6 +25,8 @@ li {
   height: 450px;
 }
 
+.keep-spaces { white-space: pre-wrap; }
+
 /*************************************************************
                             NAV
 *************************************************************/
@@ -164,7 +166,21 @@ li {
 .games-sort-box {
   // background-color: #1290b5;
   background-clip: content-box;
+
+  // @media(min-width: 960px){
+  //   display: flex;
+  //   flex-direction: column;
+  //   }
+
 }
+@media(max-width: 1200px){
+  .games-sort-buttons  {
+  display: flex;
+  flex-direction: column;
+  }
+}
+
+
 .game-title {
   font-size: 17px;
   font-weight: 900;

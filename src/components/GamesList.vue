@@ -1,19 +1,37 @@
 <template>
   <div id="games">
     <div class="row">
-      <h1 class="d-flex justify-content-center pt-4 pb-4 form-title col-6">
+      <h1 class="d-flex justify-content-center pt-4 pb-4 form-title col-8">
         {{ FilterType }} {{ FilterValue }}
       </h1>
       <div
-        class="games-sort-box d-flex justify-content-center align-items-center pt-1 pb-1 col-6"
+        class="games-sort-box d-flex justify-content-center align-items-center pt-1 pb-1 col-4"
       >
-        <h2 class="ml-1">Sort by</h2>
+        <h2 class="ml-1 keep-spaces">Sort by&nbsp;&nbsp;&nbsp;</h2>
 
-        <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default">Name</button>
-          <button type="button" class="btn btn-default">Date</button>
-          <button type="button" class="btn btn-default">Rating</button>
-        </div>
+        <b-button-group class="games-sort-buttons">
+          <b-button
+            @click="SortBy('Name')"
+            :pressed="false"
+            :disabled="loading == true"
+            :variant="sortNameVariant"
+            >Name</b-button
+          >
+          <b-button
+            @click="SortBy('Date')"
+            :pressed="false"
+            :disabled="loading == true"
+            :variant="sortDateVariant"
+            >Date</b-button
+          >
+          <b-button
+            @click="SortBy('Rating')"
+            :pressed="false"
+            :disabled="loading == true"
+            :variant="sortRatingVariant"
+            >Rating</b-button
+          >
+        </b-button-group>
       </div>
     </div>
 
@@ -27,6 +45,11 @@
           <li class="list-group-item game-title">
             {{ game.name }}
           </li>
+          <li class="list-group-item">
+            {{ $func.unixTimestampToDate(game.first_release_date) }}
+            Rating {{ getRating(game.rating) }}
+          </li>
+
           <img
             class="game-cover"
             v-if="game.cover !== undefined"
@@ -62,19 +85,72 @@ export default {
   data() {
     return {
       loadMore: false,
+      loading: false,
       page: 0,
       pageSize: 20,
+      sort: "Name",
+      sortOrder: "asc",
       games: [],
+      sortNameVariant: "success",
+      sortDateVariant: "info",
+      sortRatingVariant: "info",
     };
   },
   methods: {
+    ComputeSortVariant() {
+      this.sortNameVariant = "info";
+      this.sortDateVariant = "info";
+      this.sortRatingVariant = "info";
+
+      switch (this.sort) {
+        case "Name":
+          this.sortNameVariant =
+            this.sortOrder === "asc" ? "success" : "warning";
+          break;
+        case "Date":
+          this.sortDateVariant =
+            this.sortOrder === "desc" ? "success" : "warning";
+          break;
+        case "Rating":
+          this.sortRatingVariant =
+            this.sortOrder === "desc" ? "success" : "warning";
+          break;
+      }
+    },
+    getRating(rating) {
+      if (rating === undefined) return "";
+      return rating.toFixed(2);
+    },
+    async SortBy(criteria) {
+      if (this.sort === criteria) {
+        if (this.sortOrder === "asc") {
+          this.sortOrder = "desc";
+        } else {
+          this.sortOrder = "asc";
+        }
+      } else {
+        if (criteria === "Name") this.sortOrder = "asc";
+        else this.sortOrder = "desc";
+        this.sort = criteria;
+      }
+
+      this.ComputeSortVariant();
+
+      this.page = 0;
+      this.games = [];
+      this.loadMore = false;
+      await this.GetGames();
+    },
     async GetGames() {
+      this.loading = true;
       if (this.FilterType != null) {
         if (this.FilterType === "Genre") {
           let res = await this.$IgdbService.getGamesByGenre(
             this.FilterValue,
             this.page++,
-            this.pageSize
+            this.pageSize,
+            this.sort,
+            this.sortOrder
           );
           this.games = this.games.concat(res);
 
@@ -83,13 +159,16 @@ export default {
           let res = await this.$IgdbService.getGamesByPlatform(
             this.FilterValue,
             this.page++,
-            this.pageSize
+            this.pageSize,
+            this.sort,
+            this.sortOrder
           );
           this.games = this.games.concat(res);
 
           res.length < this.pageSize && (this.loadMore = false);
         }
       }
+      this.loading = false;
     },
   },
 
