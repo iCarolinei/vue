@@ -1,15 +1,13 @@
 <template>
   <div id="games">
     <div class="row">
-      <h1 class="d-flex justify-content-center pt-4 pb-4 form-title col-8">
+      <h1 class="d-flex justify-content-center pt-4 pb-4 form-title col-12">
         {{ FilterType }} {{ FilterValue }}
       </h1>
-      <div
-        class="games-sort-box d-flex justify-content-center align-items-center pt-1 pb-1 col-4"
-      >
+      <div class="games-sort-box d-flex justify-content-center row col-12">
         <h2 class="ml-1 keep-spaces">Sort by&nbsp;&nbsp;&nbsp;</h2>
 
-        <b-button-group class="games-sort-buttons">
+        <b-button-group class="games-sort-buttons pb-3">
           <b-button
             @click="SortBy('Name')"
             :pressed="false"
