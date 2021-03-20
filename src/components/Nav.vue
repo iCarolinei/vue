@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="navbar">
-      <nav class="navbar navbar-expand-lg navbar-light py-3">
+      <nav class="navbar navbar-expand-lg navbar-light py-3" fixed="top">
         <button
           class="navbar-toggler"
           type="button"
@@ -93,13 +93,49 @@
                 Consoles
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-item-left" href="#">Playstation</a>
-                <a class="dropdown-item nav-item-left" href="#">Xbox</a>
-                <a class="dropdown-item nav-item-left" href="#">Switch</a>
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: {
+                      filterType: 'Platform',
+                      filterValue: 'Playstation',
+                    },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Playstation</a
+                  ></router-link
+                >
+
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Platform', filterValue: 'Xbox' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Xbox</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Platform', filterValue: 'Switch' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Switch</a
+                  ></router-link
+                >
                 <a class="dropdown-item nav-item-left" href="#">Ds</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item nav-item-left" href="#">Retro</a>
-                <a class="dropdown-item nav-item-left" href="#">Pc</a>
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Platform', filterValue: 'PC' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >PC</a
+                  ></router-link
+                >
               </div>
             </li>
             <li class="nav-item dropdown px-2">

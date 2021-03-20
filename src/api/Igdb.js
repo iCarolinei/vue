@@ -5,9 +5,11 @@ export default class Igdb {
     Client_secret = null;
     Token = null;
     Expired_at = null;
+    PageSize = 10
 
     TwitchTokenUrl = "https://id.twitch.tv/oauth2/token";
     Url = "https://blooming-savannah-76505.herokuapp.com/https://api.igdb.com/v4/"
+    GamesData = "fields name,summary,url,cover.*,platforms.*;  sort name; "
 
 
     constructor() {
@@ -45,26 +47,51 @@ export default class Igdb {
         };
     }
 
-    async getGamesByGenre(name) {
-        console.log("getGamesByGenre with genre " + name);
+    async getGames(filter, page, pageSize) {
+        let range = " limit " + pageSize + ";";
+        if (page > 0)
+            range += " offset " + (page * pageSize) + ";";
+        let games = await axios.post(this.Url + "games", this.GamesData + filter + range, this.getPayload());
+        games = games.data;
+        //console.log(games);
+        return games;
+    }
+
+    async getGamesByGenre(name, page, pageSize) {
+        //console.log("getGamesByGenre with name " + name);
         await this.EnsureConnected();
 
         let genre = this.Genres.find(x => x.name === name);
         if (genre === undefined) return null;
 
-        let data = "fields name,summary,url,screenshots.*; where genres = (" + genre["id"] + ");limit 500; sort name;";
-
-        let games = await axios.post(this.Url + "games", data, this.getPayload());
-        games = games.data;
-
-
-        console.log(games);
-        return games;
-
-
+        return this.getGames("where genres = (" + genre["id"] + ");", page, pageSize);
     }
 
+    async getGamesByPlatform(name, page, pageSize) {
+        //console.log("getGamesByPlatform with name " + name);
+        await this.EnsureConnected();
 
+        let platforms = [];
+        switch (name) {
+            case 'PC':
+                platforms = ["PC"];
+                break;
+            case 'Playstation':
+                platforms = ["PS1", "PS2", "PS3", "PS4", "PS5"];
+                break;
+            case 'Switch':
+                platforms = ["Switch"];
+                break;
+            case 'Xbox':
+                platforms = ["Xbox", "Xbox-360", "Xbox-one", "Xbox-series"];
+                break;
+            default:
+                console.log(`Sorry, we are out of ${name}.`);
+        }
+        platforms = this.Platforms.filter(p => platforms.includes(p.name));
+        let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
+        return this.getGames("where platforms = (" + platformIds.join(',') + ");", page, pageSize);
+    }
 
     Genres = [
         {
@@ -161,5 +188,61 @@ export default class Igdb {
         }
     ]
 
+    Platforms = [
+        {
+            id: 6,
+            name: "PC"
+        },
+        {
+            id: 7,
+            name: "PS1",
+            imageUrl: "../assets/platforms/PS1.png"
+        },
+        {
+            id: 8,
+            name: "PS2",
+            imageUrl: "../assets/platforms/PS2.png"
+        },
+        {
+            id: 9,
+            name: "PS3",
+            imageUrl: "../assets/platforms/PS3.jpg"
+        },
+        {
+            id: 48,
+            name: "PS4",
+            imageUrl: "../assets/platforms/PS4.png"
+        },
+        {
+            id: 167,
+            name: "PS5",
+            imageUrl: "../assets/platforms/PS5.jpeg"
+        },
+        {
+            id: 130,
+            name: "Switch",
+            imageUrl: "../assets/platforms/switch.png"
+        },
+        {
+            id: 11,
+            name: "Xbox",
+            imageUrl: "../assets/platforms/xbox.jpg"
+        },
+        {
+            id: 12,
+            name: "Xbox 360",
+            imageUrl: "../assets/platforms/xbox-360.jpg"
+        },
+        {
+            id: 49,
+            name: "Xbox One",
+            imageUrl: "../assets/platforms/xbox-one.jpg"
+        },
+        {
+            id: 169,
+            name: "Xbox Series",
+            imageUrl: "../assets/platforms/xbox-series.jpg"
+        }
+    ]
 
 }

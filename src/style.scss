@@ -30,7 +30,9 @@ li {
 *************************************************************/
 #navbar {
   background: linear-gradient(0.25turn, #07bcce, #3089d7, #6e3de5);
-  
+  width: 100vw;
+   position: fixed;
+  z-index: 10;
   .nav-logo {
     width: 180px;
     -webkit-transform: scale(1);
@@ -94,7 +96,7 @@ li {
   height: auto;
 } 
 /*************************************************************
-                             FOOTER
+                            FOOTER
 *************************************************************/
 .footer {
   background: linear-gradient(  #07bcce, #3089d7, #6e3de5 ) !important;
@@ -124,7 +126,7 @@ li {
   
 }
  /*************************************************************
-                             FORM
+                            FORM
 *************************************************************/
   .form {
 .form-title {
@@ -135,7 +137,7 @@ li {
  }}
 
 /*************************************************************
-                             MAP
+                            MAP
 *************************************************************/
  #mapContainer {
   width: 100vw;
@@ -157,8 +159,12 @@ li {
 
 
 /*************************************************************
-                             GAMES
+                            GAMES
 *************************************************************/
+.games-sort-box {
+  // background-color: #1290b5;
+  background-clip: content-box;
+}
 .game-title {
   font-size: 17px;
   font-weight: 900;
@@ -166,9 +172,13 @@ li {
   display: flex;
   justify-content: center;
 }
+.game-cover {
+ height:90px;
+ width: 90px;
+}
 
 /*************************************************************
-                             ABOUT SPOOKNICK GAMES
+                            ABOUT SPOOKNICK GAMES
 *************************************************************/
 .about-spooknick {
   .about-style {
