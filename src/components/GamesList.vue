@@ -89,29 +89,27 @@ export default {
       sort: "Name",
       sortOrder: "asc",
       games: [],
-      sortNameVariant: "success",
-      sortDateVariant: "info",
-      sortRatingVariant: "info",
+      sortNameVariant: "info",
+      sortDateVariant: "secondary",
+      sortRatingVariant: "secondary",
     };
   },
   methods: {
     ComputeSortVariant() {
-      this.sortNameVariant = "info";
-      this.sortDateVariant = "info";
-      this.sortRatingVariant = "info";
+      this.sortNameVariant = "secondary";
+      this.sortDateVariant = "secondary";
+      this.sortRatingVariant = "secondary";
 
       switch (this.sort) {
         case "Name":
-          this.sortNameVariant =
-            this.sortOrder === "asc" ? "success" : "warning";
+          this.sortNameVariant = this.sortOrder === "asc" ? "info" : "warning";
           break;
         case "Date":
-          this.sortDateVariant =
-            this.sortOrder === "desc" ? "success" : "warning";
+          this.sortDateVariant = this.sortOrder === "desc" ? "info" : "warning";
           break;
         case "Rating":
           this.sortRatingVariant =
-            this.sortOrder === "desc" ? "success" : "warning";
+            this.sortOrder === "desc" ? "info" : "warning";
           break;
       }
     },
