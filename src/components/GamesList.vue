@@ -1,11 +1,11 @@
 <template>
-  <div id="games">
+  <div id="games ">
     <div class="row">
-      <h1 class="d-flex justify-content-center pt-4 pb-4 form-title col-12">
+      <h1 class="d-flex justify-content-center pt-4 pb-3 form-title col-12">
         {{ FilterType }} {{ FilterValue }}
       </h1>
       <div class="games-sort-box d-flex justify-content-center row col-12">
-        <h2 class="ml-1 keep-spaces">Sort by&nbsp;&nbsp;&nbsp;</h2>
+        <h5 class="ml-1 keep-spaces pr-2 text-info">Sort by</h5>
 
         <b-button-group class="games-sort-buttons pb-3">
           <b-button
