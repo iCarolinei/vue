@@ -51,6 +51,15 @@
                 <router-link
                   :to="{
                     name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Arcade' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Arcade</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
                     params: { filterType: 'Genre', filterValue: 'Fighting' },
                   }"
                   ><a class="dropdown-item nav-item-left" href="#"
@@ -66,17 +75,105 @@
                     >Course</a
                   ></router-link
                 >
-                <a class="dropdown-item nav-item-left" href="#">Education</a>
-                <a class="dropdown-item nav-item-left" href="#"
-                  >Musique et Rythme</a
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'MOBA' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Moba</a
+                  ></router-link
                 >
-                <a class="dropdown-item nav-item-left" href="#">Plateforme</a>
-                <a class="dropdown-item nav-item-left" href="#">RPG</a>
-                <a class="dropdown-item nav-item-left" href="#">Reflexion</a>
-                <a class="dropdown-item nav-item-left" href="#">Shooter</a>
-                <a class="dropdown-item nav-item-left" href="#">Simulation</a>
-                <a class="dropdown-item nav-item-left" href="#">Sports</a>
-                <a class="dropdown-item nav-item-left" href="#">Stratégie</a>
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Music' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Musique et Rythme</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Platform' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Plateforme</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: {
+                      filterType: 'Genre',
+                      filterValue: 'Point-and-click',
+                    },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Point-and-click</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: {
+                      filterType: 'Genre',
+                      filterValue: 'Role-playing (RPG)',
+                    },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >RPG</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: {
+                      filterType: 'Genre',
+                      filterValue: 'Real Time Strategy (RTS)',
+                    },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >RTS</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Shooter' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Shooter</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Simulator' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Simulation</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Sport' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Sports</a
+                  ></router-link
+                >
+                <router-link
+                  :to="{
+                    name: 'Games',
+                    params: { filterType: 'Genre', filterValue: 'Strategy' },
+                  }"
+                  ><a class="dropdown-item nav-item-left" href="#"
+                    >Stratégie</a
+                  ></router-link
+                >
               </div>
             </li>
 
@@ -124,9 +221,7 @@
                     >Switch</a
                   ></router-link
                 >
-                <a class="dropdown-item nav-item-left" href="#">Ds</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-item-left" href="#">Retro</a>
+
                 <router-link
                   :to="{
                     name: 'Games',
