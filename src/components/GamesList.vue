@@ -54,7 +54,10 @@
             class="list-group-item text-info p-3 d-flex justify-content-center"
           >
             {{ $func.unixTimestampToDate(game.first_release_date) }}
-            Rating {{ getRating(game.rating) }}
+            Rating
+            <span class="border rounded-circle">{{
+              getRating(game.rating)
+            }}</span>
           </li>
           <div class="d-flex justify-content-center">
             <img
@@ -67,7 +70,7 @@
           <li
             class="list-group-item text-secondary game-summary d-flex justify-content-center py-4"
           >
-            {{ game.summary }}
+            {{ getSummary(game.summary) }}
           </li>
           <li class="list-group-item game-url d-flex justify-content-center">
             <font-awesome-icon icon="link" /><span class="mx-2">
@@ -76,15 +79,13 @@
           </li>
         </ul>
       </div>
-      <div class="d-flex justify-content-center">
-        <scroll-loader :loader-method="GetGames" :loader-enable="loadMore">
-        </scroll-loader>
-      </div>
     </div>
 
     <div v-else>
       <h1>No game to display :(</h1>
     </div>
+    <scroll-loader :loader-method="GetGames" :loader-enable="loadMore">
+    </scroll-loader>
   </div>
 </template>
 
@@ -175,9 +176,25 @@ export default {
       }
       this.loading = false;
     },
+    getSummary(summary) {
+      if (summary === undefined) return "";
+      if (summary.length > 300) {
+        summary = summary.substring(0, 300);
+        let endingChars = [" ", ".", "?", "!"];
+        while (summary.length > 0) {
+          if (endingChars.includes(summary[summary.length - 1])) break;
+
+          summary = summary.substring(0, summary.length - 1);
+        }
+
+        return summary + " (...)";
+      }
+
+      return summary;
+    },
   },
-  mounted() {
-    this.GetGames();
+  async mounted() {
+    await this.GetGames();
     this.loadMore = true;
   },
   props: {
