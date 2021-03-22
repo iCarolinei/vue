@@ -103,7 +103,7 @@ export default {
       sort: "Name",
       sortOrder: "asc",
       games: [],
-      sortNameVariant: "info",
+      sortNameVariant: "primary",
       sortDateVariant: "secondary",
       sortRatingVariant: "secondary",
     };
@@ -115,14 +115,16 @@ export default {
       this.sortRatingVariant = "secondary";
       switch (this.sort) {
         case "Name":
-          this.sortNameVariant = this.sortOrder === "asc" ? "info" : "warning";
+          this.sortNameVariant =
+            this.sortOrder === "asc" ? "primary" : "warning";
           break;
         case "Date":
-          this.sortDateVariant = this.sortOrder === "desc" ? "info" : "warning";
+          this.sortDateVariant =
+            this.sortOrder === "desc" ? "primary" : "warning";
           break;
         case "Rating":
           this.sortRatingVariant =
-            this.sortOrder === "desc" ? "info" : "warning";
+            this.sortOrder === "desc" ? "primary" : "warning";
           break;
       }
     },
