@@ -51,7 +51,7 @@
           </li>
 
           <li
-            class="list-group-item text-info d-flex justify-content-around p-3"
+            class="list-group-item text-info p-3 d-flex justify-content-center"
           >
             {{ $func.unixTimestampToDate(game.first_release_date) }}
             Rating {{ getRating(game.rating) }}

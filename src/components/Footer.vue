@@ -11,7 +11,7 @@
               <li>* Univers playstation</li>
               <li>* Univers xbox</li>
               <li>* Univers nintendo</li>
-              <li>* Univers rétro</li>
+              <li>* Univers pc</li>
             </ul>
           </div>
         </div>
@@ -30,7 +30,7 @@
         </h5>
 
         <div class="card-text footer-text row pt-2">
-          <div class="col-6">
+          <div class="col-md-12 col-lg-6">
             <ul>
               <router-link to="/spooknick"><li>* Spooknick</li></router-link>
               <router-link to="/store"><li>* Magasin</li></router-link>
@@ -38,7 +38,7 @@
               <router-link to="/contact"><li>* Contact</li></router-link>
             </ul>
           </div>
-          <div class="col-6">
+          <div class="col-md-12 col-lg-6">
             <ul>
               <router-link to="/delivery"><li>* Livraison</li></router-link>
               <router-link to="/payment"><li>* Paiements</li></router-link>
