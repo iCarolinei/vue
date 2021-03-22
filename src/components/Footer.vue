@@ -5,15 +5,14 @@
         <h5 class="card-title d-flex justify-content-center footer-title">
           Catégories
         </h5>
-        <div class="d-flex justify-content-center">
-          <div class="card-text footer-text pt-2">
-            <ul>
-              <li>* Univers playstation</li>
-              <li>* Univers xbox</li>
-              <li>* Univers nintendo</li>
-              <li>* Univers pc</li>
-            </ul>
-          </div>
+
+        <div class="card-text footer-text pt-2 footer-col-console">
+          <ul>
+            <li>* Univers playstation</li>
+            <li>* Univers xbox</li>
+            <li>* Univers nintendo</li>
+            <li>* Univers pc</li>
+          </ul>
         </div>
       </div>
       <div class="card-footer d-flex justify-content-center footer-link">
@@ -30,7 +29,7 @@
         </h5>
 
         <div class="card-text footer-text row pt-2">
-          <div class="col-md-12 col-lg-6">
+          <div class="col-md-12 col-lg-6 footer-col-info">
             <ul>
               <router-link to="/spooknick"><li>* Spooknick</li></router-link>
               <router-link to="/store"><li>* Magasin</li></router-link>

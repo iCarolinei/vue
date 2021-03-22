@@ -51,13 +51,12 @@
           </li>
 
           <li
-            class="list-group-item text-info p-3 d-flex justify-content-center"
+            class="list-group-item text-info p-3 d-flex justify-content-around col-12"
           >
             {{ $func.unixTimestampToDate(game.first_release_date) }}
-            Rating
-            <span class="border rounded-circle">{{
-              getRating(game.rating)
-            }}</span>
+            <span class="border rounded-circle"
+              >Rating {{ getRating(game.rating) }}</span
+            >
           </li>
           <div class="d-flex justify-content-center">
             <img
