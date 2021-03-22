@@ -180,31 +180,39 @@ li {
 /*************************************************************
                             GAMES
 *************************************************************/
-.games-sort-box {
-  // background-color: #1290b5;
+#games-list {
+  font-size: 0.9rem !important;
+
+  .game-col {
+    width: 30rem;
+  }
+  .games-sort-box {
+
   background-clip: content-box;
 
-  // @media(min-width: 960px){
-  //   display: flex;
-  //   flex-direction: column;
-  //   }
+
 
 }
+
+
 
 
 
 .game-title {
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: 900;
-  color: #1290b5 !important;
-  display: flex;
-  justify-content: center;
+  color: white !important;
+  background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%) !important;
+  
 }
 .game-cover {
- height:90px;
- width: 90px;
+ height: auto;
+ width: 10rem !important;
 }
-
+.game-url {
+  font-size: 0.6rem;
+}
+}
 /*************************************************************
                             ABOUT SPOOKNICK GAMES
 *************************************************************/

@@ -38,35 +38,50 @@
       class="d-flex flex-wrap flex-row col-12"
       v-if="games !== undefined"
     >
-      <div v-for="game in games" :key="game.id">
+      <div
+        class="card shadow my-3 bg-white rounded mx-3 game-col"
+        v-for="game in games"
+        :key="game.id"
+      >
         <ul class="list-group list-group-flush">
-          <li class="list-group-item game-title">
+          <li
+            class="list-group-item game-title d-flex justify-content-center py-4"
+          >
             {{ game.name }}
           </li>
-          <li class="list-group-item">
+
+          <li
+            class="list-group-item text-info d-flex justify-content-around p-3"
+          >
             {{ $func.unixTimestampToDate(game.first_release_date) }}
             Rating {{ getRating(game.rating) }}
           </li>
+          <div class="d-flex justify-content-center">
+            <img
+              class="game-cover card-img-top pt-4"
+              v-if="game.cover !== undefined"
+              :src="game.cover.url"
+            />
+          </div>
 
-          <img
-            class="game-cover"
-            v-if="game.cover !== undefined"
-            :src="game.cover.url"
-          />
-
-          <li class="list-group-item game-summary">
+          <li
+            class="list-group-item text-secondary game-summary d-flex justify-content-center py-4"
+          >
             {{ game.summary }}
           </li>
-          <li class="list-group-item game-url">
+          <li class="list-group-item game-url d-flex justify-content-center">
             <font-awesome-icon icon="link" /><span class="mx-2">
               <a v-bind:href="game.url">{{ game.url }}</a>
             </span>
           </li>
         </ul>
       </div>
-      <scroll-loader :loader-method="GetGames" :loader-enable="loadMore">
-      </scroll-loader>
+      <div class="d-flex justify-content-center">
+        <scroll-loader :loader-method="GetGames" :loader-enable="loadMore">
+        </scroll-loader>
+      </div>
     </div>
+
     <div v-else>
       <h1>No game to display :(</h1>
     </div>
@@ -77,7 +92,6 @@
 import Vue from "vue";
 import ScrollLoader from "vue-scroll-loader";
 Vue.use(ScrollLoader);
-
 export default {
   name: "GamesList",
   data() {
@@ -99,7 +113,6 @@ export default {
       this.sortNameVariant = "secondary";
       this.sortDateVariant = "secondary";
       this.sortRatingVariant = "secondary";
-
       switch (this.sort) {
         case "Name":
           this.sortNameVariant = this.sortOrder === "asc" ? "info" : "warning";
@@ -129,9 +142,7 @@ export default {
         else this.sortOrder = "desc";
         this.sort = criteria;
       }
-
       this.ComputeSortVariant();
-
       this.page = 0;
       this.games = [];
       this.loadMore = false;
@@ -149,7 +160,6 @@ export default {
             this.sortOrder
           );
           this.games = this.games.concat(res);
-
           res.length < this.pageSize && (this.loadMore = false);
         } else if (this.FilterType === "Platform") {
           let res = await this.$IgdbService.getGamesByPlatform(
@@ -160,14 +170,12 @@ export default {
             this.sortOrder
           );
           this.games = this.games.concat(res);
-
           res.length < this.pageSize && (this.loadMore = false);
         }
       }
       this.loading = false;
     },
   },
-
   mounted() {
     this.GetGames();
     this.loadMore = true;
