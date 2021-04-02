@@ -321,6 +321,7 @@
               <div class="row">
                 <div class="col">
                   <input
+                    ref="inputSearch"
                     class="form-control nav-control mr-sm-1"
                     type="search"
                     placeholder="Search"
@@ -350,6 +351,11 @@ export default {
   name: "Nav",
   props: {
     content: String,
+  },
+  methods: {
+    focus: function () {
+      this.$refs.inputSearch.focus();
+    },
   },
 };
 </script>
