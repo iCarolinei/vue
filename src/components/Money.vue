@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <img class="img-footer" src="../assets/mario.png" />
+    <img class="img-footer" src="../assets/4.jpg" />
   </div>
 </template>
 

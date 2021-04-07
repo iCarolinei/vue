@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <img class="img-footer" src="../assets/deathStranding.jpg" />
+    <img class="img-footer" src="../assets/2.jpg" />
   </div>
 </template>
 

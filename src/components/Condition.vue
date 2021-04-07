@@ -149,7 +149,7 @@
       </div>
     </div>
 
-    <img class="img-footer" src="../assets/battle.jpg" />
+    <img class="img-footer" src="../assets/6.gif" />
   </div>
 </template>
 
