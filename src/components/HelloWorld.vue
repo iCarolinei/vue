@@ -1,6 +1,10 @@
 <template>
-  <div class="container">
-    <h1>{{ msg }}</h1>
+  <div id="skybox" class="skybox">
+    <router-link to="/">
+      <div class="txt">Game over <br /><span>404 FILE NOT FOUND</span></div>
+      <div id="player" class="idle"></div
+    ></router-link>
+    <div class="ground"></div>
   </div>
 </template>
 

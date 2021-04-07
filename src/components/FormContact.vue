@@ -1,9 +1,7 @@
 <template>
   <form>
     <div class="form">
-      <h1 class="d-flex justify-content-center pt-4 form-title">
-        Contact-nous ❤️
-      </h1>
+      <h1 class="d-flex justify-content-center pt-4">Contact-nous ❤️</h1>
       <div class="form-group">
         <label for="nameLastName">Nom et prénom</label>
         <input
@@ -34,6 +32,23 @@
       </div>
       <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-info my-4 p-2">Soumettre</button>
+      </div>
+      <div class="container-bird">
+        <div class="bird-container bird-container--one">
+          <div class="bird bird--one"></div>
+        </div>
+
+        <div class="bird-container bird-container--two">
+          <div class="bird bird--two"></div>
+        </div>
+
+        <div class="bird-container bird-container--three">
+          <div class="bird bird--three"></div>
+        </div>
+
+        <div class="bird-container bird-container--four">
+          <div class="bird bird--four"></div>
+        </div>
       </div>
     </div>
   </form>

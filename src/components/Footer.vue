@@ -31,21 +31,35 @@
         <div class="card-text footer-text row pt-2">
           <div class="col-md-12 col-lg-6 footer-col-info">
             <ul>
-              <router-link to="/spooknick"><li>* Spooknick</li></router-link>
-              <router-link to="/store"><li>* Magasin</li></router-link>
-              <router-link to="/faq"><li>* Faq</li></router-link>
-              <router-link to="/contact"><li>* Contact</li></router-link>
+              <router-link to="/spooknick"
+                ><li class="footer-color">* Spooknick</li></router-link
+              >
+              <router-link to="/store"
+                ><li class="footer-color">* Magasin</li></router-link
+              >
+              <router-link to="/faq"
+                ><li class="footer-color">* Faq</li></router-link
+              >
+              <router-link to="/contact"
+                ><li class="footer-color">* Contact</li></router-link
+              >
             </ul>
           </div>
           <div class="col-md-12 col-lg-6">
             <ul>
-              <router-link to="/delivery"><li>* Livraison</li></router-link>
-              <router-link to="/payment"><li>* Paiements</li></router-link>
+              <router-link to="/delivery"
+                ><li class="footer-color">* Livraison</li></router-link
+              >
+              <router-link to="/payment"
+                ><li class="footer-color">* Paiements</li></router-link
+              >
               <router-link to="/confidentialityGlobal"
-                ><li>* Confidentialité</li></router-link
+                ><li class="footer-color">* Confidentialité</li></router-link
               >
               <router-link to="/conditionGlobal"
-                ><li>* Conditions générales</li></router-link
+                ><li class="footer-color">
+                  * Conditions générales
+                </li></router-link
               >
             </ul>
           </div>
@@ -81,7 +95,7 @@
           nouveautées ! ❤️
         </p>
         <div class="d-flex justify-content-center">
-          <div class="input-group pt-2 col-8">
+          <div class="input-group col-8">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">@</span>
             </div>

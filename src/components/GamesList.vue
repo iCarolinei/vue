@@ -38,7 +38,7 @@
 
     <div
       id="games-list"
-      class="d-flex flex-wrap flex-row col-12"
+      class="d-flex flex-wrap flex-row justify-content-center col-12"
       v-if="games !== undefined"
     >
       <div
@@ -54,12 +54,12 @@
           </li>
 
           <li
-            class="list-group-item text-info p-3 d-flex justify-content-around col-12"
+            class="list-group-item text-info p-3 d-flex justify-content-around align-items-center col-12"
           >
-            {{ $func.unixTimestampToDate(game.first_release_date) }}
-            <span class="border rounded-circle"
-              >Rating {{ getRating(game.rating) }}</span
-            >
+            <div class="game-date">
+              {{ $func.unixTimestampToDate(game.first_release_date) }}
+            </div>
+            <div class="rating">{{ getRating(game.rating) }}%</div>
           </li>
           <div class="d-flex justify-content-center">
             <img
@@ -76,8 +76,19 @@
 
           <li
             class="list-group-item text-secondary game-summary d-flex justify-content-center py-4"
+            v-if="game.summary !== undefined"
           >
             {{ getSummary(game.summary) }}
+          </li>
+          <li
+            class="list-group-item text-secondary game-summary d-flex justify-content-center py-4"
+            v-else
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
+            deserunt dicta itaque earum cumque at possimus ipsum. Dolorum velit
+            suscipit facilis pariatur aliquid dignissimos, in distinctio
+            molestiae corrupti minima perspiciatis. Dolorum velit suscipit
+            facilis pariatur aliquid dignissimos, in (...)
           </li>
           <li class="list-group-item game-url d-flex justify-content-center">
             <font-awesome-icon icon="link" /><span class="mx-2">
