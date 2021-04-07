@@ -59,7 +59,11 @@
             <div class="game-date">
               {{ $func.unixTimestampToDate(game.first_release_date) }}
             </div>
-            <div class="rating">{{ getRating(game.rating) }}%</div>
+            <div
+              class="rating"
+              ref="el"
+              v-bind:class="getRating(game.rating)"
+            ></div>
           </li>
           <div class="d-flex justify-content-center">
             <img
@@ -147,9 +151,34 @@ export default {
           break;
       }
     },
-    getRating(rating) {
-      if (rating === undefined) return "";
-      return rating.toFixed(2);
+    getRating(e, ratingScore) {
+      if (ratingScore !== undefined) ratingScore = ratingScore.toFixed(2);
+
+      // let rating = this.$refs.el;
+      // const ratingContent = rating.innerHTML;
+
+      // // Define if the score is good, meh or bad according to its value
+      // let scoreClass = "default";
+      // if (ratingScore !== undefined)
+      //   scoreClass =
+      //     ratingScore < 50 ? "bad" : ratingScore < 70 ? "meh" : "good";
+
+      // // Add score class to the rating
+      // rating.classList.add(scoreClass);
+
+      // // After adding the class, get its color
+      // const ratingColor = window.getComputedStyle(rating).backgroundColor;
+
+      // // Define the background gradient according to the score and color
+      // const gradient = `background: conic-gradient(${ratingColor} ${ratingScore}%, transparent 0 100%)`;
+
+      // // Set the gradient as the rating background
+      // rating.setAttribute("style", gradient);
+
+      // // Wrap the content in a tag to show it above the pseudo element that masks the bar
+      // rating.innerHTML = `<span>${ratingScore} ${
+      //   ratingContent.indexOf("%") >= 0 ? "<small>%</small>" : ""
+      // }</span>`;
     },
     async SortBy(criteria) {
       if (this.sort === criteria) {

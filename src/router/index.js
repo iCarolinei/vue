@@ -11,6 +11,7 @@ import Contact from "../views/Contact.vue";
 import Payment from "../views/Payment.vue";
 import ConditionGlobal from "../views/ConditionGlobal.vue";
 import ConfidentialityGlobal from "../views/ConfidentialityGlobal.vue";
+import PageNotFound from "../views/PageNotFound.vue";
 
 import Games from "../views/Games.vue";
 Vue.use(VueRouter);
@@ -76,6 +77,10 @@ const routes = [
     name: "Games",
     props: true,
     component: Games
+  },
+  {
+    path: "*",
+    component: PageNotFound
   }
 
 ];
