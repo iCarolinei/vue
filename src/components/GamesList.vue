@@ -59,11 +59,7 @@
             <div class="game-date">
               {{ $func.unixTimestampToDate(game.first_release_date) }}
             </div>
-            <div
-              class="rating"
-              ref="el"
-              v-bind:class="getRating(game.rating)"
-            ></div>
+            <div class="rating">{{ getRating(game.rating) }}</div>
           </li>
           <div class="d-flex justify-content-center">
             <img
@@ -151,34 +147,44 @@ export default {
           break;
       }
     },
-    getRating(e, ratingScore) {
-      if (ratingScore !== undefined) ratingScore = ratingScore.toFixed(2);
+    getRating(rating) {
+      if (rating === undefined) return "";
+      return rating.toFixed(2);
+    },
+    SetRating() {
+      const ratings = document.querySelectorAll(".rating");
 
-      // let rating = this.$refs.el;
-      // const ratingContent = rating.innerHTML;
+      // Iterate over all rating items
+      ratings.forEach((rating) => {
+        if (rating.classList.length > 1) return;
 
-      // // Define if the score is good, meh or bad according to its value
-      // let scoreClass = "default";
-      // if (ratingScore !== undefined)
-      //   scoreClass =
-      //     ratingScore < 50 ? "bad" : ratingScore < 70 ? "meh" : "good";
+        let scoreClass = "default";
 
-      // // Add score class to the rating
-      // rating.classList.add(scoreClass);
+        const ratingContent = rating.innerHTML;
+        let ratingScore = "N/A";
+        if (ratingContent !== "") {
+          ratingScore = parseInt(ratingContent, 10);
+          scoreClass =
+            ratingScore < 50 ? "bad" : ratingScore < 70 ? "meh" : "good";
+        }
 
-      // // After adding the class, get its color
-      // const ratingColor = window.getComputedStyle(rating).backgroundColor;
+        // Add score class to the rating
+        rating.classList.add(scoreClass);
 
-      // // Define the background gradient according to the score and color
-      // const gradient = `background: conic-gradient(${ratingColor} ${ratingScore}%, transparent 0 100%)`;
+        // After adding the class, get its color
+        const ratingColor = window.getComputedStyle(rating).backgroundColor;
 
-      // // Set the gradient as the rating background
-      // rating.setAttribute("style", gradient);
+        // Define the background gradient according to the score and color
+        const gradient = `background: conic-gradient(${ratingColor} ${ratingScore}%, transparent 0 100%)`;
 
-      // // Wrap the content in a tag to show it above the pseudo element that masks the bar
-      // rating.innerHTML = `<span>${ratingScore} ${
-      //   ratingContent.indexOf("%") >= 0 ? "<small>%</small>" : ""
-      // }</span>`;
+        // Set the gradient as the rating background
+        rating.setAttribute("style", gradient);
+
+        // Wrap the content in a tag to show it above the pseudo element that masks the bar
+        rating.innerHTML = `<span>${ratingScore} ${
+          ratingContent.indexOf("%") >= 0 ? "<small>%</small>" : ""
+        }</span>`;
+      });
     },
     async SortBy(criteria) {
       if (this.sort === criteria) {
@@ -267,6 +273,9 @@ export default {
   async mounted() {
     await this.GetGames();
     this.loadMore = true;
+  },
+  updated() {
+    this.SetRating();
   },
   props: {
     FilterType: {

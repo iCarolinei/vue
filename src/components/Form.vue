@@ -11,9 +11,11 @@
           class="form-control"
           id="exampleInputName"
           aria-describedby="NameHelp"
-          placeholder="Inscris ton prénom"
+          placeholder="Prénom"
         />
-        <p v-if="nameValidationError">{{ nameValidationError }}</p>
+        <p class="form-color" v-if="nameValidationError">
+          {{ nameValidationError }}
+        </p>
         <small id="SNameHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
@@ -25,9 +27,11 @@
           class="form-control"
           id="exampleInputSecond"
           aria-describedby="SNameHelp"
-          placeholder="Inscris ton nom"
+          placeholder="Nom"
         />
-        <p v-if="lastnameValidationError">{{ lastnameValidationError }}</p>
+        <p class="form-color" v-if="lastnameValidationError">
+          {{ lastnameValidationError }}
+        </p>
         <small id="PseudoHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
@@ -39,9 +43,11 @@
           class="form-control"
           id="exampleInputPeusod"
           aria-describedby="PseudoHelp"
-          placeholder="Inscris ton pseudo"
+          placeholder="Pseudo"
         />
-        <p v-if="usernameValidationError">{{ usernameValidationError }}</p>
+        <p class="form-color" v-if="usernameValidationError">
+          {{ usernameValidationError }}
+        </p>
         <small id="EmailHelp" class="form-text text-muted"></small>
       </div>
 
@@ -54,9 +60,11 @@
           class="form-control"
           id="exampleInputEmail"
           aria-describedby="EmailHelp"
-          placeholder="Inscris ton email"
+          placeholder="Email"
         />
-        <p v-if="emailValidationError">{{ emailValidationError }}</p>
+        <p class="form-color" v-if="emailValidationError">
+          {{ emailValidationError }}
+        </p>
         <small id="MdpHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
@@ -67,21 +75,25 @@
           type="password"
           class="form-control"
           id="exampleInputMdp"
-          placeholder="Inscris ton mot de passe"
+          placeholder="Mot de passe"
         />
-        <p v-if="password">{{ password }}</p>
+        <p class="form-color" v-if="passwordValidationError">
+          {{ passwordValidationError }}
+        </p>
       </div>
       <div class="form-group">
         <label for="exampleInputMdp2">Confirme mot de passe</label>
         <input
           v-model="confirmpassword"
           name="confirmpassword"
-          type="confirmPassword"
+          type="password"
           class="form-control"
           id="exampleInputMdp2"
           placeholder="Confirme ton mot de passe"
         />
-        <p v-if="confirmpassword">{{ confirmpassword }}</p>
+        <p class="form-color" v-if="confirmPasswordValidationError">
+          {{ confirmPasswordValidationError }}
+        </p>
       </div>
       <div class="form-check mt-4 form-valid">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
@@ -121,38 +133,46 @@ export default {
       usernameValidationError: null,
       emailValidationError: null,
       passwordValidationError: null,
-      confirmpasswordValidationError: null,
+      confirmPasswordValidationError: null,
     };
   },
   methods: {
     checkForm: function (e) {
+      let validationOk = true;
       this.errors = [];
       this.nameValidationError = null;
       this.lastnameValidationError = null;
       this.usernameValidationError = null;
       this.emailValidationError = null;
       this.passwordValidationError = null;
-      this.confirmpasswordValidationError = null;
+      this.confirmPasswordValidationError = null;
       if (!this.name) {
         this.nameValidationError = "Entre ton prénom";
+        validationOk = false;
       }
       if (!this.lastname) {
         this.lastnameValidationError = "Entre ton nom";
+        validationOk = false;
       }
       if (!this.username) {
         this.usernameValidationError = "Entre ton surnom";
+        validationOk = false;
       }
       if (!this.email) {
         this.emailValidationError = "Entre ton email";
+        validationOk = false;
       }
       if (!this.password) {
         this.passwordValidationError = "Entre un mdp";
+        validationOk = false;
       } else if (this.password.length < 6) {
-        this.nameValidationError =
+        this.passwordValidationError =
           "Ton mot de passe doit contenir au moins 6 caractères";
+        validationOk = false;
       }
       if (!this.confirmpassword) {
-        this.confirmpasswordValidationError = "Entre une deuxième fois ton mdp";
+        this.confirmPasswordValidationError = "Entre une deuxième fois ton mdp";
+        validationOk = false;
       }
 
       if (
@@ -161,9 +181,19 @@ export default {
         this.confirmpassword !== this.password
       ) {
         this.errors.push("les deux mots de passent ne sont pas identiques");
+        validationOk = false;
       }
       if (!this.errors.length) {
         return true;
+      }
+
+      if (validationOk) {
+        this.$store.commit("updateRegisterName", this.name);
+        this.$store.commit("updateRegisterLastName", this.lastname);
+        this.$store.commit("updateRegisterUsername", this.username);
+        this.$store.commit("updateRegisterEmail", this.email);
+        this.$store.commit("updateRegisterPassword", this.password);
+        this.$router.push("register");
       }
       e.preventDefault();
     },
