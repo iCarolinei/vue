@@ -4,7 +4,10 @@
       <h1 class="d-flex justify-content-center pt-4 pb-3 form-title col-12">
         {{ FilterType }} {{ FilterValue }}
       </h1>
-      <div class="games-sort-box d-flex justify-content-center row col-12">
+      <div
+        class="games-sort-box d-flex justify-content-center row col-12"
+        v-if="FilterType != 'Search'"
+      >
         <h5 class="ml-1 keep-spaces pr-2 text-info">Sort by</h5>
 
         <b-button-group class="games-sort-buttons pb-3">
@@ -64,6 +67,11 @@
               v-if="game.cover !== undefined"
               :src="game.cover.url"
             />
+            <img
+              class="game-cover card-img-top pt-4"
+              v-else
+              src="../assets/notfound.jpg"
+            />
           </div>
 
           <li
@@ -83,7 +91,7 @@
     <div v-else>
       <h1>No game to display :(</h1>
     </div>
-    <scroll-loader :loader-method="GetGames" :loader-enable="loadMore">
+    <scroll-loader :loader-method="GetGames" :loader-disable="!loadMore">
     </scroll-loader>
   </div>
 </template>
@@ -162,7 +170,7 @@ export default {
             this.sortOrder
           );
           this.games = this.games.concat(res);
-          res.length < this.pageSize && (this.loadMore = false);
+          this.loadMore = !(res.length < this.pageSize);
         } else if (this.FilterType === "Platform") {
           let res = await this.$IgdbService.getGamesByPlatform(
             this.FilterValue,
@@ -172,7 +180,29 @@ export default {
             this.sortOrder
           );
           this.games = this.games.concat(res);
-          res.length < this.pageSize && (this.loadMore = false);
+          this.loadMore = !(res.length < this.pageSize);
+        } else if (this.FilterType === "Search") {
+          let res = await this.$IgdbService.getGamesBySearch(
+            this.FilterValue,
+            this.page++,
+            this.pageSize,
+            this.sort,
+            this.sortOrder
+          );
+
+          let arr = this.games.concat(res);
+
+          this.games = arr.reduce((acc, current) => {
+            const x = acc.find((item) => item.id === current.id);
+            if (!x) {
+              return acc.concat([current]);
+            } else {
+              return acc;
+            }
+          }, []);
+
+          this.loadMore = !(res.length < this.pageSize);
+          //res.length < this.pageSize && (this.loadMore = false);
         }
       }
       this.loading = false;

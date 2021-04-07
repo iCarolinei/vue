@@ -1,11 +1,16 @@
 const axios = require('axios')
 
 export default class Igdb {
+    static Platform_PC = "PC";
+    static Platform_Playstation = "Playstation";
+    static Platform_Switch = "Switch";
+    static Platform_Xbox = "Xbox";
+
     Client_id = null;
     Client_secret = null;
     Token = null;
     Expired_at = null;
-    PageSize = 10
+    PageSize = 10;
 
     TwitchTokenUrl = "https://id.twitch.tv/oauth2/token";
     Url = "https://blooming-savannah-76505.herokuapp.com/https://api.igdb.com/v4/"
@@ -59,7 +64,7 @@ export default class Igdb {
         }
     }
 
-    async getGames(filter, page, pageSize, sort, sortOrder) {
+    async getGames(filter, page, pageSize, sort, sortOrder, search = null) {
         sort = this.mapSort(sort);
         let range = ` limit ${pageSize};`;
         if (page > 0)
@@ -74,8 +79,11 @@ export default class Igdb {
         }
 
         filter = " where " + filter;
-
-        let data = this.GamesData + filter + range + ` sort ${sort} ${sortOrder};`
+        let data = "";
+        if (search != null)
+            data = `search " ${search}";`
+        data += this.GamesData + filter + range;
+        if (search == null) data += ` sort ${sort} ${sortOrder};`
         let games = await axios.post(this.Url + "games", data, this.getPayload());
         games = games.data;
 
@@ -88,33 +96,58 @@ export default class Igdb {
         let genre = this.Genres.find(x => x.name === name);
         if (genre === undefined) return null;
 
-        return this.getGames("genres = (" + genre["id"] + ");", page, pageSize, sort, sortOrder);
+        let platforms = Igdb.getAllPlatformItems();
+        platforms = this.Platforms.filter(p => platforms.includes(p.name));
+
+        let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
+
+        return this.getGames("platforms = (" + platformIds.join(',') + ") & genres = (" + genre["id"] + ");", page, pageSize, sort, sortOrder);
     }
 
     async getGamesByPlatform(name, page, pageSize, sort, sortOrder) {
         await this.EnsureConnected();
 
-        let platforms = [];
-        switch (name) {
-            case 'PC':
-                platforms = ["PC"];
-                break;
-            case 'Playstation':
-                platforms = ["PS1", "PS2", "PS3", "PS4", "PS5"];
-                break;
-            case 'Switch':
-                platforms = ["Switch"];
-                break;
-            case 'Xbox':
-                platforms = ["Xbox", "Xbox-360", "Xbox-one", "Xbox-series"];
-                break;
-            default:
-                console.log(`Sorry, we are out of ${name}.`);
-        }
+        let platforms = Igdb.getPlatformItems(name);
         platforms = this.Platforms.filter(p => platforms.includes(p.name));
+
         let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
         return this.getGames("platforms = (" + platformIds.join(',') + ");", page, pageSize, sort, sortOrder);
     }
+
+    async getGamesBySearch(search, page, pageSize, sort, sortOrder) {
+        await this.EnsureConnected();
+
+        let platforms = Igdb.getAllPlatformItems();
+        platforms = this.Platforms.filter(p => platforms.includes(p.name));
+        let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
+        return this.getGames("platforms = (" + platformIds.join(',') + ");", page, pageSize, sort, sortOrder, search);
+    }
+
+    static getAllPlatformItems() {
+        let items = [];
+        items = items.concat(Igdb.getPlatformItems(this.Platform_PC));
+        items = items.concat(Igdb.getPlatformItems(this.Platform_Playstation));
+        items = items.concat(Igdb.getPlatformItems(this.Platform_Switch));
+        items = items.concat(Igdb.getPlatformItems(this.Platform_Xbox));
+
+        return items;
+    }
+    static getPlatformItems(platform) {
+        switch (platform) {
+            case this.Platform_PC:
+                return ["PC"];
+            case this.Platform_Playstation:
+                return ["PS1", "PS2", "PS3", "PS4", "PS5"];
+            case this.Platform_Switch:
+                return ["Switch"];
+            case this.Platform_Xbox:
+                return ["Xbox", "Xbox-360", "Xbox-one", "Xbox-series"];
+            default:
+                console.log(`Unknown platform : ${platform}.`);
+                return [];
+        }
+    }
+
 
     Genres = [
         {

@@ -325,12 +325,15 @@
                     class="form-control nav-control mr-sm-1"
                     type="search"
                     placeholder="Search"
+                    v-on:submit.prevent=""
+                    v-on:keyup.enter="search"
                   />
                 </div>
                 <div class="col-pixel-width-40">
                   <button
                     class="btn btn-outline-success my-2 my-sm-0 nav-btn"
-                    type="submit"
+                    type="button"
+                    v-on:click="search"
                   >
                     <font-awesome-icon icon="search" />
                   </button>
@@ -355,6 +358,15 @@ export default {
   methods: {
     focus: function () {
       this.$refs.inputSearch.focus();
+    },
+    search: function () {
+      let searchValue = this.$refs.inputSearch.value;
+      if (searchValue === undefined || searchValue === "") return;
+
+      this.$router.push({
+        name: "Games",
+        params: { filterType: "Search", filterValue: searchValue },
+      });
     },
   },
 };
