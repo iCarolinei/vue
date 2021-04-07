@@ -90,7 +90,7 @@
         <h5 class="card-title d-flex justify-content-center footer-title">
           Newsletter
         </h5>
-        <p class="card-text footer-text pt-2">
+        <p class="card-text footer-text pt-2 d-flex justify-content-center">
           Abonne-toi pour ne jamais rien rater et être au courant des dernières
           nouveautées ! ❤️
         </p>
