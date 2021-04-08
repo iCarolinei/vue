@@ -6,7 +6,7 @@
       </h1>
       <div
         class="games-sort-box d-flex justify-content-center row col-12"
-        v-if="FilterType != 'Search'"
+        v-if="FilterType != 'Search' && FilterType != 'Top'"
       >
         <h5 class="ml-1 keep-spaces pr-2 text-info">Sort by</h5>
 
@@ -248,7 +248,25 @@ export default {
           }, []);
 
           this.loadMore = !(res.length < this.pageSize);
-          //res.length < this.pageSize && (this.loadMore = false);
+        } else if (this.FilterType === "Top") {
+          let res = await this.$IgdbService.getGamesByTop(
+            this.FilterValue,
+            this.page,
+            this.pageSize
+          );
+
+          let arr = this.games.concat(res);
+
+          this.games = arr.reduce((acc, current) => {
+            const x = acc.find((item) => item.id === current.id);
+            if (!x) {
+              return acc.concat([current]);
+            } else {
+              return acc;
+            }
+          }, []);
+
+          this.loadMore = false;
         }
       }
       this.loading = false;

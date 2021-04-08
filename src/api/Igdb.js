@@ -1,4 +1,5 @@
 const axios = require('axios')
+import { func } from '../func.js'
 
 export default class Igdb {
     static Platform_PC = "PC";
@@ -86,42 +87,67 @@ export default class Igdb {
         if (search == null) data += ` sort ${sort} ${sortOrder};`
         let games = await axios.post(this.Url + "games", data, this.getPayload());
         games = games.data;
-
         return games;
     }
 
     async getGamesByGenre(name, page, pageSize, sort, sortOrder) {
         await this.EnsureConnected();
 
-        let genre = this.Genres.find(x => x.name === name);
+        let genre = Igdb.Genres.find(x => x.name === name);
         if (genre === undefined) return null;
 
         let platforms = Igdb.getAllPlatformItems();
-        platforms = this.Platforms.filter(p => platforms.includes(p.name));
 
-        let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
-
-        return this.getGames("platforms = (" + platformIds.join(',') + ") & genres = (" + genre["id"] + ");", page, pageSize, sort, sortOrder);
+        return this.getGames("platforms = (" + Igdb.getPlatformIds(platforms).join(',') + ") & genres = (" + genre["id"] + ");", page, pageSize, sort, sortOrder);
     }
 
     async getGamesByPlatform(name, page, pageSize, sort, sortOrder) {
         await this.EnsureConnected();
 
         let platforms = Igdb.getPlatformItems(name);
-        platforms = this.Platforms.filter(p => platforms.includes(p.name));
-
-        let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
-        return this.getGames("platforms = (" + platformIds.join(',') + ");", page, pageSize, sort, sortOrder);
+        return this.getGames("platforms = (" + Igdb.getPlatformIds(platforms).join(',') + ");", page, pageSize, sort, sortOrder);
     }
 
     async getGamesBySearch(search, page, pageSize, sort, sortOrder) {
         await this.EnsureConnected();
 
         let platforms = Igdb.getAllPlatformItems();
-        platforms = this.Platforms.filter(p => platforms.includes(p.name));
-        let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
-        return this.getGames("platforms = (" + platformIds.join(',') + ");", page, pageSize, sort, sortOrder, search);
+        return this.getGames("platforms = (" + Igdb.getPlatformIds(platforms).join(',') + ");", page, pageSize, sort, sortOrder, search);
     }
+
+    async getGamesByTop(topType, page, pageSize) {
+        await this.EnsureConnected();
+
+        let platforms = Igdb.getAllPlatformItems();
+        let filter = "platforms = (" + Igdb.getPlatformIds(platforms).join(',') + ");";
+        let date = func.getDateWithoutTime(new Date());
+        date = func.dateToUnixTimestamp(date);
+        let sortOrder = "asc";
+
+        switch (topType) {
+            case "Last":
+                filter = ` first_release_date < ${date} & ` + filter;
+                sortOrder = "desc";
+                break;
+            case "Next":
+                filter = ` first_release_date >= ${date} & ` + filter;
+                break;
+            default:
+                console.log(`Unknown topType : ${topType}.`);
+                return [];
+        }
+
+        return this.getGames(filter, page, pageSize, "Date", sortOrder);
+
+
+
+    }
+    static getPlatformIds(platformsList) {
+
+        platformsList = Igdb.Platforms.filter(p => platformsList.includes(p.name));
+        return platformsList.reduce((a, o) => (a.push(o.id), a), []);
+    }
+
 
     static getAllPlatformItems() {
         let items = [];
@@ -149,7 +175,7 @@ export default class Igdb {
     }
 
 
-    Genres = [
+    static Genres = [
         {
             id: 2,
             name: "Point-and-click"
@@ -244,7 +270,7 @@ export default class Igdb {
         }
     ]
 
-    Platforms = [
+    static Platforms = [
         {
             id: 6,
             name: "PC"
