@@ -87,7 +87,16 @@ export default class Igdb {
         if (search == null) data += ` sort ${sort} ${sortOrder};`
         let games = await axios.post(this.Url + "games", data, this.getPayload());
         games = games.data;
+        games.forEach(game => {
+            game.platforms = Igdb.mapPlatforms(game.platforms);
+        });
         return games;
+    }
+
+    static mapPlatforms(platforms) {
+
+        let platformIds = platforms.reduce((a, o) => (a.push(o.id), a), []);
+        return Igdb.Platforms.filter(p => platformIds.includes(p.id));
     }
 
     async getGamesByGenre(name, page, pageSize, sort, sortOrder) {
@@ -273,57 +282,59 @@ export default class Igdb {
     static Platforms = [
         {
             id: 6,
-            name: "PC"
+            name: "PC",
+            imageUrl: "platforms/PC.png"//"https://www.vippng.com/png/detail/375-3757516_pc-logo-png-pc-platform-png.png"
+
         },
         {
             id: 7,
             name: "PS1",
-            imageUrl: "../assets/platforms/PS1.png"
+            imageUrl: "platforms/PS1.png"
         },
         {
             id: 8,
             name: "PS2",
-            imageUrl: "../assets/platforms/PS2.png"
+            imageUrl: "platforms/PS2.png"
         },
         {
             id: 9,
             name: "PS3",
-            imageUrl: "../assets/platforms/PS3.jpg"
+            imageUrl: "platforms/PS3.jpg"
         },
         {
             id: 48,
             name: "PS4",
-            imageUrl: "../assets/platforms/PS4.png"
+            imageUrl: "platforms/PS4.png"
         },
         {
             id: 167,
             name: "PS5",
-            imageUrl: "../assets/platforms/PS5.jpeg"
+            imageUrl: "platforms/PS5.jpeg"
         },
         {
             id: 130,
             name: "Switch",
-            imageUrl: "../assets/platforms/switch.png"
+            imageUrl: "platforms/switch.png"
         },
         {
             id: 11,
             name: "Xbox",
-            imageUrl: "../assets/platforms/xbox.jpg"
+            imageUrl: "platforms/xbox.jpg"
         },
         {
             id: 12,
             name: "Xbox 360",
-            imageUrl: "../assets/platforms/xbox-360.jpg"
+            imageUrl: "platforms/xbox-360.jpg"
         },
         {
             id: 49,
             name: "Xbox One",
-            imageUrl: "../assets/platforms/xbox-one.jpg"
+            imageUrl: "platforms/xbox-one.jpg"
         },
         {
             id: 169,
             name: "Xbox Series",
-            imageUrl: "../assets/platforms/xbox-series.jpg"
+            imageUrl: "platforms/xbox-series.jpg"
         }
     ]
 

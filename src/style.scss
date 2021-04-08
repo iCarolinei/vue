@@ -381,27 +381,22 @@ li {
    
   }
   .games-sort-box {
-
   background-clip: content-box;
-
-
-
 }
-
-
-
-
-
 .game-title {
   font-size: 1.2rem;
   font-weight: 900;
   color: white !important;
   background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%) !important;
-  
 }
 .game-cover {
  height: auto;
  width: 10rem !important;
+}
+.platform-img {
+  object-fit: contain;
+  height:60px;
+  width: 60px;
 }
 .game-url {
   font-size: 0.7rem;

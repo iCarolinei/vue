@@ -90,6 +90,16 @@
             molestiae corrupti minima perspiciatis. Dolorum velit suscipit
             facilis pariatur aliquid dignissimos, in (...)
           </li>
+          <li class="d-flex flex-row justify-content-center align-self-center">
+            <img
+              class="platform-img card-img-top pt-4 m-1"
+              v-for="platform in game.platforms"
+              :key="platform.id"
+              :src="platform.imageUrl"
+              :title="platform.name"
+              :alt="platform.name"
+            />
+          </li>
           <li class="list-group-item game-url d-flex justify-content-center">
             <font-awesome-icon icon="link" /><span class="mx-2">
               <a v-bind:href="game.url">{{ game.url }}</a>
