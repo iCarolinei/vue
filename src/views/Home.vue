@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home px-3">
     <GamesList FilterType="Top" FilterValue="Next" />
     <GamesList FilterType="Top" FilterValue="Last" />
   </div>

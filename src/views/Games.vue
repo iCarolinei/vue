@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="px-3">
     <GamesList :FilterType="filterType" :FilterValue="filterValue" />
   </div>
 </template>
