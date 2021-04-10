@@ -75,7 +75,7 @@
 export default {
   name: "SendingDelivery",
   props: {
-    msg: String,
-  },
+    msg: String
+  }
 };
 </script>

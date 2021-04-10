@@ -10,7 +10,7 @@ import Money from "../components/Money.vue";
 export default {
   name: "Payement",
   components: {
-    Money,
-  },
+    Money
+  }
 };
 </script>

@@ -38,7 +38,7 @@
 export default {
   name: "FormLogin",
   props: {
-    content: String,
-  },
+    content: String
+  }
 };
 </script>

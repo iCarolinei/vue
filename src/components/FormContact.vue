@@ -1,7 +1,9 @@
 <template>
   <form>
     <div class="form">
-      <h1 class="d-flex justify-content-center pt-4">Contact-nous ❤️</h1>
+      <h1 class="d-flex justify-content-center pt-4">
+        {{ $t("contact.title") }}
+      </h1>
       <div class="form-group">
         <label for="nameLastName">Nom et prénom</label>
         <input

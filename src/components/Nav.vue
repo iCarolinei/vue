@@ -271,7 +271,9 @@
               <router-link to="/store"
                 ><a class="nav-link nav-menu-right" href="#"
                   ><font-awesome-icon title="Magasin" icon="map-marker-alt" />
-                  <span class="d-none d-xl-inline px-1">Magasin</span></a
+                  <span class="d-none d-xl-inline px-1">
+                    {{ $t("menu.shop") }}</span
+                  ></a
                 ></router-link
               >
             </li>
@@ -290,13 +292,18 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <router-link to="/login"
-                  ><a class="dropdown-item nav-item-right" href="#">Login</a>
+                  ><a class="dropdown-item nav-item-right" href="#">{{
+                    $t("menu.login")
+                  }}</a>
                 </router-link>
                 <router-link to="/register"
-                  ><a class="dropdown-item nav-item-right" href="#">Register</a>
+                  ><a class="dropdown-item nav-item-right" href="#">{{
+                    $t("menu.register")
+                  }}</a>
                 </router-link>
               </div>
             </li>
+
             <li class="nav-item dropdown px-2">
               <a
                 class="nav-link nav-menu-right dropdown-toggle"
@@ -307,11 +314,19 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Fr
+                {{ $i18n.locale }}
               </a>
+
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-item-right" href="#">FR</a>
-                <a class="dropdown-item nav-item-right" href="#">EN</a>
+                <a
+                  class="dropdown-item nav-item-right"
+                  v-for="(lang, i) in langs"
+                  :key="`Lang${i}`"
+                  :value="lang"
+                  @click="$i18n.locale = lang"
+                  >{{ lang }}</a
+                >
+                <!-- <a class="dropdown-item nav-item-right" href="#">EN</a> -->
               </div>
             </li>
           </ul>
@@ -352,6 +367,9 @@
 <script>
 export default {
   name: "Nav",
+  data() {
+    return { langs: ["en", "fr"] };
+  },
   props: {
     content: String,
   },

@@ -10,7 +10,7 @@ import Dropdown from "../components/Dropdown.vue";
 export default {
   name: "Faq",
   components: {
-    Dropdown,
-  },
+    Dropdown
+  }
 };
 </script>

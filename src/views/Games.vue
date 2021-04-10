@@ -10,11 +10,11 @@ import GamesList from "../components/GamesList.vue";
 export default {
   name: "Games",
   components: {
-    GamesList,
+    GamesList
   },
   props: {
     filterType: String,
-    filterValue: String,
-  },
+    filterValue: String
+  }
 };
 </script>

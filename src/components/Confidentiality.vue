@@ -157,7 +157,7 @@
 export default {
   name: "Confidentiality",
   props: {
-    msg: String,
-  },
+    msg: String
+  }
 };
 </script>

@@ -235,7 +235,7 @@
             <font-awesome-icon
               class="mx-4 dropdown-social"
               title="Instagram"
-              :icon="['fab', 'instagram-square']" /></a
+              :icon="['fab', 'instagram-square']"/></a
         ></small>
       </div>
     </div>
@@ -247,7 +247,7 @@
 export default {
   name: "Dropdown",
   props: {
-    msg: String,
-  },
+    msg: String
+  }
 };
 </script>

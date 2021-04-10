@@ -12,7 +12,7 @@
 export default {
   name: "NotFound",
   props: {
-    msg: String,
+    msg: String
   },
   methods: {
     walkLeft() {
@@ -32,11 +32,10 @@ export default {
       this.$refs.player.className = "search-right";
       // player.style.left = "60%";
       setTimeout(this.walkLeft, 3000);
-    },
+    }
   },
-  mounted: function () {
+  mounted: function() {
     this.walkLeft();
-  },
+  }
 };
 </script>
-

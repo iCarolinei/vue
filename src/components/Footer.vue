@@ -128,7 +128,7 @@
             <font-awesome-icon
               class="mx-2 footer-icon"
               title="Instagram"
-              :icon="['fab', 'instagram-square']" /></a
+              :icon="['fab', 'instagram-square']"/></a
         ></small>
       </div>
     </div>
@@ -139,7 +139,7 @@
 export default {
   name: "Footer",
   props: {
-    content: String,
-  },
+    content: String
+  }
 };
 </script>

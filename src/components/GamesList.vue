@@ -134,7 +134,7 @@ export default {
       games: [],
       sortNameVariant: "primary",
       sortDateVariant: "secondary",
-      sortRatingVariant: "secondary",
+      sortRatingVariant: "secondary"
     };
   },
   methods: {
@@ -165,7 +165,7 @@ export default {
       const ratings = document.querySelectorAll(".rating");
 
       // Iterate over all rating items
-      ratings.forEach((rating) => {
+      ratings.forEach(rating => {
         if (rating.classList.length > 1) return;
 
         let scoreClass = "default";
@@ -249,7 +249,7 @@ export default {
           let arr = this.games.concat(res);
 
           this.games = arr.reduce((acc, current) => {
-            const x = acc.find((item) => item.id === current.id);
+            const x = acc.find(item => item.id === current.id);
             if (!x) {
               return acc.concat([current]);
             } else {
@@ -268,7 +268,7 @@ export default {
           let arr = this.games.concat(res);
 
           this.games = arr.reduce((acc, current) => {
-            const x = acc.find((item) => item.id === current.id);
+            const x = acc.find(item => item.id === current.id);
             if (!x) {
               return acc.concat([current]);
             } else {
@@ -296,7 +296,7 @@ export default {
       }
 
       return summary;
-    },
+    }
   },
   async mounted() {
     await this.GetGames();
@@ -308,12 +308,12 @@ export default {
   props: {
     FilterType: {
       default: null,
-      type: String,
+      type: String
     },
     FilterValue: {
       default: null,
-      type: String,
-    },
-  },
+      type: String
+    }
+  }
 };
 </script>

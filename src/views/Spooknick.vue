@@ -10,7 +10,7 @@ import AboutSpooknick from "../components/AboutSpooknick.vue";
 export default {
   name: "Spooknick",
   components: {
-    AboutSpooknick,
-  },
+    AboutSpooknick
+  }
 };
 </script>

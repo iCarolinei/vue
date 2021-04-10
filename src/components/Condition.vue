@@ -157,7 +157,7 @@
 export default {
   name: "Condition",
   props: {
-    msg: String,
-  },
+    msg: String
+  }
 };
 </script>

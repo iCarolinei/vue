@@ -10,7 +10,7 @@ import SendingDelivery from "../components/SendingDelivery.vue";
 export default {
   name: "Delivery",
   components: {
-    SendingDelivery,
-  },
+    SendingDelivery
+  }
 };
 </script>

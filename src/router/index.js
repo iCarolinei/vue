@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Store from "../views/Store.vue"
-import Login from "../views/Login.vue"
+import Store from "../views/Store.vue";
+import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Spooknick from "../views/Spooknick.vue";
 import Faq from "../views/Faq.vue";
@@ -73,7 +73,7 @@ const routes = [
     component: ConfidentialityGlobal
   },
   {
-    path: '/games/:filterType/:filterValue',
+    path: "/games/:filterType/:filterValue",
     name: "Games",
     props: true,
     component: Games
@@ -82,7 +82,6 @@ const routes = [
     path: "*",
     component: PageNotFound
   }
-
 ];
 
 const router = new VueRouter({

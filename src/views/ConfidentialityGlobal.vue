@@ -10,7 +10,7 @@ import Confidentiality from "../components/Confidentiality.vue";
 export default {
   name: "ConfidentialityGlobal",
   components: {
-    Confidentiality,
-  },
+    Confidentiality
+  }
 };
 </script>

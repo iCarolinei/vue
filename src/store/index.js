@@ -2,7 +2,13 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 Vue.use(Vuex);
-let registerData = { name: null, lastname: null, username: null, email: null, password: null };
+let registerData = {
+  name: null,
+  lastname: null,
+  username: null,
+  email: null,
+  password: null
+};
 
 /*const store =*/ new Vuex.Store({
   state: {

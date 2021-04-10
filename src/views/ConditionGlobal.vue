@@ -10,7 +10,7 @@ import Condition from "../components/Condition.vue";
 export default {
   name: "ConditionGlobal",
   components: {
-    Condition,
-  },
+    Condition
+  }
 };
 </script>

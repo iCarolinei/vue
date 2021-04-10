@@ -74,7 +74,7 @@
 export default {
   name: "Money",
   props: {
-    msg: String,
-  },
+    msg: String
+  }
 };
 </script>

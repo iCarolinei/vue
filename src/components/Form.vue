@@ -133,11 +133,11 @@ export default {
       usernameValidationError: null,
       emailValidationError: null,
       passwordValidationError: null,
-      confirmPasswordValidationError: null,
+      confirmPasswordValidationError: null
     };
   },
   methods: {
-    checkForm: function (e) {
+    checkForm: function(e) {
       let validationOk = true;
       this.errors = [];
       this.nameValidationError = null;
@@ -197,10 +197,10 @@ export default {
       }
       e.preventDefault();
     },
-    validEmail: function (email) {
+    validEmail: function(email) {
       let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
-    },
-  },
+    }
+  }
 };
 </script>

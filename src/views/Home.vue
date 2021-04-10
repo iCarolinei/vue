@@ -11,7 +11,7 @@ import GamesList from "../components/GamesList.vue";
 export default {
   name: "Home",
   components: {
-    GamesList,
-  },
+    GamesList
+  }
 };
 </script>

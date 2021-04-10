@@ -10,7 +10,7 @@ import NotFound from "../components/NotFound.vue";
 export default {
   name: "PageNotFound",
   components: {
-    NotFound,
-  },
+    NotFound
+  }
 };
 </script>

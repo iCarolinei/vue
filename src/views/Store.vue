@@ -25,11 +25,7 @@ import Map from "../components/Map";
 export default {
   name: "Store",
   components: {
-    Map,
-  },
+    Map
+  }
 };
 </script>
-
-
-
-
