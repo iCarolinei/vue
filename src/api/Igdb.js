@@ -110,10 +110,10 @@ export default class Igdb {
 
     return this.getGames(
       "platforms = (" +
-        Igdb.getPlatformIds(platforms).join(",") +
-        ") & genres = (" +
-        genre["id"] +
-        ");",
+      Igdb.getPlatformIds(platforms).join(",") +
+      ") & genres = (" +
+      genre["id"] +
+      ");",
       page,
       pageSize,
       sort,
@@ -234,11 +234,11 @@ export default class Igdb {
     },
     {
       id: 11,
-      name: "Real Time Strategy (RTS)"
+      name: "RTS"
     },
     {
       id: 12,
-      name: "Role-playing (RPG)"
+      name: "RPG"
     },
     {
       id: 13,

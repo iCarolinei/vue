@@ -2,6 +2,29 @@
 	"contact": {
 		"title": "Contacte-nous ❤️"
 	},
+	"gamesKind": {
+		"adventure": "Aventure",
+		"arcade": "Arcade",
+		"fighting": "Combat",
+		"moba": "MOBA",
+		"music": "Musique & rythme",
+		"platform": "Platforme",
+		"point-and-click": "Point'n'click",
+		"racing": "Courses",
+		"rpg": "Jeu de rôle (RPG)",
+		"rts": "Stratégie en temps réel (RTS)",
+		"shooter": "Jeu de tir",
+		"simulator": "Simulateurs",
+		"sport": "Sports",
+		"strategy": "Stratégie"
+	},
+	"gamesList": {
+		"title_kind": "Genre",
+		"title_lastReleases": "Dernières sorties",
+		"title_nextReleases": "Prochaines sorties",
+		"title_platform": "Plateforme",
+		"title_search": "Recherche"
+	},
 	"menu": {
 		"login": "Se connecter",
 		"register": "S'enregistrer",

@@ -2,7 +2,7 @@
   <div id="games ">
     <div class="row">
       <h1 class="d-flex justify-content-center pt-4 pb-3 form-title col-12">
-        {{ FilterType }} {{ FilterValue }}
+        {{ getTitle() }}
       </h1>
       <div
         class="games-sort-box d-flex justify-content-center row col-12"
@@ -134,10 +134,29 @@ export default {
       games: [],
       sortNameVariant: "primary",
       sortDateVariant: "secondary",
-      sortRatingVariant: "secondary"
+      sortRatingVariant: "secondary",
     };
   },
   methods: {
+    getTitle() {
+      switch (this.FilterType) {
+        case "Kind":
+          return (
+            this.$t("gamesList.title_kind") +
+            " > " +
+            this.$t("gamesKind." + this.FilterValue.toLowerCase())
+          );
+        case "Platform":
+          return this.$t("gamesList.title_platform") + " > " + this.FilterValue;
+        case "Search":
+          return this.$t("gamesList.title_search") + ": " + this.FilterValue;
+        case "Top":
+          if (this.FilterValue === "Next")
+            return this.$t("gamesList.title_nextReleases");
+          else if (this.FilterValue === "Last")
+            return this.$t("gamesList.title_lastReleases");
+      }
+    },
     ComputeSortVariant() {
       this.sortNameVariant = "secondary";
       this.sortDateVariant = "secondary";
@@ -165,7 +184,7 @@ export default {
       const ratings = document.querySelectorAll(".rating");
 
       // Iterate over all rating items
-      ratings.forEach(rating => {
+      ratings.forEach((rating) => {
         if (rating.classList.length > 1) return;
 
         let scoreClass = "default";
@@ -217,7 +236,7 @@ export default {
     async GetGames() {
       this.loading = true;
       if (this.FilterType != null) {
-        if (this.FilterType === "Genre") {
+        if (this.FilterType === "Kind") {
           let res = await this.$IgdbService.getGamesByGenre(
             this.FilterValue,
             this.page++,
@@ -249,7 +268,7 @@ export default {
           let arr = this.games.concat(res);
 
           this.games = arr.reduce((acc, current) => {
-            const x = acc.find(item => item.id === current.id);
+            const x = acc.find((item) => item.id === current.id);
             if (!x) {
               return acc.concat([current]);
             } else {
@@ -268,7 +287,7 @@ export default {
           let arr = this.games.concat(res);
 
           this.games = arr.reduce((acc, current) => {
-            const x = acc.find(item => item.id === current.id);
+            const x = acc.find((item) => item.id === current.id);
             if (!x) {
               return acc.concat([current]);
             } else {
@@ -296,7 +315,7 @@ export default {
       }
 
       return summary;
-    }
+    },
   },
   async mounted() {
     await this.GetGames();
@@ -308,12 +327,12 @@ export default {
   props: {
     FilterType: {
       default: null,
-      type: String
+      type: String,
     },
     FilterValue: {
       default: null,
-      type: String
-    }
-  }
+      type: String,
+    },
+  },
 };
 </script>

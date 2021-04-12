@@ -42,137 +42,137 @@
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Adventure' },
+                    params: { filterType: 'Kind', filterValue: 'Adventure' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Aventure</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.adventure")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Arcade' },
+                    params: { filterType: 'Kind', filterValue: 'Arcade' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Arcade</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.arcade")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Fighting' },
+                    params: { filterType: 'Kind', filterValue: 'Fighting' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Combat</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.fighting")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Racing' },
+                    params: { filterType: 'Kind', filterValue: 'Racing' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Course</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.racing")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'MOBA' },
+                    params: { filterType: 'Kind', filterValue: 'MOBA' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Moba</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.moba")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Music' },
+                    params: { filterType: 'Kind', filterValue: 'Music' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Musique et Rythme</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.music")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Platform' },
+                    params: { filterType: 'Kind', filterValue: 'Platform' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Plateforme</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.platform")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
                     params: {
-                      filterType: 'Genre',
+                      filterType: 'Kind',
                       filterValue: 'Point-and-click',
                     },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Point-and-click</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.point-and-click")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
                     params: {
-                      filterType: 'Genre',
-                      filterValue: 'Role-playing (RPG)',
+                      filterType: 'Kind',
+                      filterValue: 'RPG',
                     },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >RPG</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.rpg")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
                     params: {
-                      filterType: 'Genre',
-                      filterValue: 'Real Time Strategy (RTS)',
+                      filterType: 'Kind',
+                      filterValue: 'RTS',
                     },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >RTS</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.rts")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Shooter' },
+                    params: { filterType: 'Kind', filterValue: 'Shooter' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Shooter</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.shooter")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Simulator' },
+                    params: { filterType: 'Kind', filterValue: 'Simulator' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Simulation</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.simulator")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Sport' },
+                    params: { filterType: 'Kind', filterValue: 'Sport' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Sports</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.sport")
+                  }}</a></router-link
                 >
                 <router-link
                   :to="{
                     name: 'Games',
-                    params: { filterType: 'Genre', filterValue: 'Strategy' },
+                    params: { filterType: 'Kind', filterValue: 'Strategy' },
                   }"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Stratégie</a
-                  ></router-link
+                  ><a class="dropdown-item nav-item-left" href="#">{{
+                    $t("gamesKind.strategy")
+                  }}</a></router-link
                 >
               </div>
             </li>
