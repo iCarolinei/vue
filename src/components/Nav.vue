@@ -243,16 +243,16 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Nouveautés
+                {{ $t("menu.new") }}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item nav-item-left" href="#"
-                  >Dernières sorties</a
-                >
+                <a class="dropdown-item nav-item-left" href="#">{{
+                  $t("menu.last")
+                }}</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-item-left" href="#"
-                  >Prochainement</a
-                >
+                <a class="dropdown-item nav-item-left" href="#">{{
+                  $t("menu.coming")
+                }}</a>
               </div>
             </li>
           </ul>
@@ -261,7 +261,9 @@
               <router-link to="/"
                 ><a class="nav-link nav-menu-right" href="#"
                   ><font-awesome-icon title="Panier" icon="shopping-cart" />
-                  <span class="d-none d-xl-inline px-1">Panier</span></a
+                  <span class="d-none d-xl-inline px-1">{{
+                    $t("menu.cart")
+                  }}</span></a
                 ></router-link
               >
             </li>
@@ -286,7 +288,9 @@
                 aria-expanded="false"
               >
                 <font-awesome-icon title="Connexion" icon="user-alt" />
-                <span class="d-none d-xl-inline px-1">Connexion</span>
+                <span class="d-none d-xl-inline px-1">{{
+                  $t("menu.connection")
+                }}</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <router-link to="/login"
@@ -337,7 +341,7 @@
                     ref="inputSearch"
                     class="form-control nav-control mr-sm-1"
                     type="search"
-                    placeholder="Search"
+                    :placeholder="$t('menu.search')"
                     v-on:submit.prevent=""
                     v-on:keyup.enter="search"
                   />

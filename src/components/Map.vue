@@ -13,11 +13,11 @@ export default {
   name: "Map",
   data() {
     return {
-      center: [50.6333, 5.56667]
+      center: [50.6333, 5.56667],
     };
   },
   methods: {
-    setupLeafletMap: function() {
+    setupLeafletMap: function () {
       const mapDiv = L.map("mapContainer").setView(this.center, 13);
       L.tileLayer(
         "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -27,7 +27,7 @@ export default {
           maxZoom: 18,
           id: "mapbox/streets-v11",
           accessToken:
-            "pk.eyJ1Ijoic3Bvb2tuaWNrIiwiYSI6ImNrbWUxdTk1cjJidTQyb2xhNmJraWZlOWUifQ.h_MnGGQVLTVyIHW02sCzTA"
+            "pk.eyJ1Ijoic3Bvb2tuaWNrIiwiYSI6ImNrbWUxdTk1cjJidTQyb2xhNmJraWZlOWUifQ.h_MnGGQVLTVyIHW02sCzTA",
         }
       ).addTo(mapDiv);
 
@@ -35,18 +35,18 @@ export default {
         iconUrl: icon,
         iconSize: [38, 38],
         iconAnchor: [22, 94],
-        popupAnchor: [-3, -76]
+        popupAnchor: [-3, -76],
       });
 
       let marker = L.marker([50.6333, 5.56667], { icon: markerIcon }).addTo(
         mapDiv
       );
-      var popup = marker.bindPopup("<b>Notre magasin <3</b>");
+      var popup = marker.bindPopup("<b>Store ❤️</b>");
       popup.openPopup();
-    }
+    },
   },
   mounted() {
     this.setupLeafletMap();
-  }
+  },
 };
 </script>

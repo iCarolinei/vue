@@ -3,15 +3,15 @@
     <div class="card footer">
       <div class="card-body">
         <h5 class="card-title d-flex justify-content-center footer-title">
-          Catégories
+          {{ $t("menu.category") }}
         </h5>
 
         <div class="card-text footer-text pt-2 footer-col-console">
           <ul>
-            <li>* Univers playstation</li>
-            <li>* Univers xbox</li>
-            <li>* Univers nintendo</li>
-            <li>* Univers pc</li>
+            <li>* {{ $t("footer.ps") }}</li>
+            <li>* {{ $t("footer.xbox") }}</li>
+            <li>* {{ $t("footer.nintendo") }}</li>
+            <li>* {{ $t("footer.pc") }}</li>
           </ul>
         </div>
       </div>
@@ -25,7 +25,7 @@
     <div class="card footer">
       <div class="card-body">
         <h5 class="card-title d-flex justify-content-center footer-title">
-          A propos
+          {{ $t("footer.about") }}
         </h5>
 
         <div class="card-text footer-text row pt-2">
@@ -35,7 +35,9 @@
                 ><li class="footer-color">* Spooknick</li></router-link
               >
               <router-link to="/store"
-                ><li class="footer-color">* Magasin</li></router-link
+                ><li class="footer-color">
+                  * {{ $t("menu.shop") }}
+                </li></router-link
               >
               <router-link to="/faq"
                 ><li class="footer-color">* Faq</li></router-link
@@ -48,17 +50,23 @@
           <div class="col-md-12 col-lg-6">
             <ul>
               <router-link to="/delivery"
-                ><li class="footer-color">* Livraison</li></router-link
+                ><li class="footer-color">
+                  * {{ $t("footer.delivery") }}
+                </li></router-link
               >
               <router-link to="/payment"
-                ><li class="footer-color">* Paiements</li></router-link
+                ><li class="footer-color">
+                  * {{ $t("footer.payment") }}
+                </li></router-link
               >
               <router-link to="/confidentialityGlobal"
-                ><li class="footer-color">* Confidentialité</li></router-link
+                ><li class="footer-color">
+                  * {{ $t("footer.confidentiality") }}
+                </li></router-link
               >
               <router-link to="/conditionGlobal"
                 ><li class="footer-color">
-                  * Conditions générales
+                  * {{ $t("footer.condition") }}
                 </li></router-link
               >
             </ul>
@@ -91,8 +99,7 @@
           Newsletter
         </h5>
         <p class="card-text footer-text pt-2 d-flex justify-content-center">
-          Abonne-toi pour ne jamais rien rater et être au courant des dernières
-          nouveautées ! ❤️
+          {{ $t("footer.newsletter") }} ❤️
         </p>
         <div class="d-flex justify-content-center">
           <div class="input-group col-8">
@@ -128,7 +135,7 @@
             <font-awesome-icon
               class="mx-2 footer-icon"
               title="Instagram"
-              :icon="['fab', 'instagram-square']"/></a
+              :icon="['fab', 'instagram-square']" /></a
         ></small>
       </div>
     </div>
@@ -139,7 +146,7 @@
 export default {
   name: "Footer",
   props: {
-    content: String
-  }
+    content: String,
+  },
 };
 </script>

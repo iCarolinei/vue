@@ -8,7 +8,9 @@
         class="games-sort-box d-flex justify-content-center row col-12"
         v-if="FilterType != 'Search' && FilterType != 'Top'"
       >
-        <h5 class="ml-1 keep-spaces pr-2 text-info">Sort by</h5>
+        <h5 class="ml-1 keep-spaces pr-2 text-info">
+          {{ $t("gamesList.sort") }}
+        </h5>
 
         <b-button-group class="games-sort-buttons pb-3">
           <b-button
@@ -16,21 +18,21 @@
             :pressed="false"
             :disabled="loading == true"
             :variant="sortNameVariant"
-            >Name</b-button
+            >{{ $t("gamesList.button1") }}</b-button
           >
           <b-button
             @click="SortBy('Date')"
             :pressed="false"
             :disabled="loading == true"
             :variant="sortDateVariant"
-            >Date</b-button
+            >{{ $t("gamesList.button2") }}</b-button
           >
           <b-button
             @click="SortBy('Rating')"
             :pressed="false"
             :disabled="loading == true"
             :variant="sortRatingVariant"
-            >Rating</b-button
+            >{{ $t("gamesList.button3") }}</b-button
           >
         </b-button-group>
       </div>

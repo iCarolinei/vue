@@ -1,7 +1,9 @@
 <template>
   <form>
     <div class="form">
-      <h1 class="d-flex justify-content-center pt-4 form-title">Login ❤️</h1>
+      <h1 class="d-flex justify-content-center pt-4 form-title">
+        {{ $t("menu.login") }} ❤️
+      </h1>
       <div class="form-group">
         <label for="exampleInputEmail1c">Email</label>
         <input
@@ -9,26 +11,28 @@
           class="form-control"
           id="exampleInputEmail1c"
           aria-describedby="emailHelp"
-          placeholder="Inscris ton email"
+          placeholder="gta-v@gmail.com"
         />
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1a">Mot de passe</label>
+        <label for="exampleInputPassword1a">{{ $t("form.pass") }}</label>
         <input
           type="password"
           class="form-control"
           id="exampleInputPassword1a"
-          placeholder="Inscris ton mot de passe"
+          placeholder="******"
         />
       </div>
       <div class="form-group form-check mt-4 form-valid">
         <input type="checkbox" class="form-check-input" id="exampleCheck1b" />
-        <label class="form-check-label" for="exampleCheck1b"
-          >Se souvenir de moi</label
-        >
+        <label class="form-check-label" for="exampleCheck1b">{{
+          $t("form.box")
+        }}</label>
       </div>
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-info my-4 p-2">Soumettre</button>
+        <button type="submit" class="btn btn-info my-4 p-2">
+          {{ $t("contact.btn") }}
+        </button>
       </div>
     </div>
   </form>
@@ -38,7 +42,7 @@
 export default {
   name: "FormLogin",
   props: {
-    content: String
-  }
+    content: String,
+  },
 };
 </script>

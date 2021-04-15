@@ -1,9 +1,89 @@
 {
+	"spooknick": {
+		"title1": "Mais qui sommes-nous ?",
+		"title2": "Nous sommes un petit magasin de jeux vidéo liègeois",
+		"title3": "L'",
+		"p1": "- Les jeux vidéos, c'est l'histoire de toute une vie. Plus qu'un passion, ça fini par faire partie de nous, de notre vie. Alors qui de mieux placé pour vous parlez de ce que nous connaissons vraiment ?",
+		"p2": "aventure commença un jour comme un autre sauf pour nous, évidemment. Jeunes motivés et geeks, à la recherche de nouveaux défis, nous décidames de monter notre propre start-up contre vents et marées. Ce ne fût pas de tout repos mais nous y sommes parvenu: nous avons pu concrétiser notre rêve de toujours.",
+		"p3": "qui a à coeur de bien faire et qui non seulement vend des jeux, et te permet de jouer sur des bornes d'arcades/consoles entre amis mais nous organisons également des tournois de tes jeux préférés. Depuis janvier 2021, nous avons le plaisir de te servir, toi notre client fidèle.",
+		"p4": " Merci infiniment de nous soutenir car sans vous, nous n'en serions pas la. Ci-dessous, un apercu des services que nous pouvons te proposer."
+	},
+	"shop": {
+		"title": "Ou nous trouver"
+	},
+	"faq": {
+		"title1": "Questions courantes",
+		"title2": "Gestion des données personnelles",
+		"title3": "Livraison & retour",
+		"title4": "Pour toutes autres questions, n'hésite pas de nous-contactez sur les réseaux "
+	},
 	"contact": {
 		"title": "Contacte-nous ❤️",
 		"name": "Nom & Prénom",
 		"comment": "Ton commentaire",
 		"btn": "Soumettre"
+	},
+	"delivery": {
+		"title1": "Tu as 14 jours pour renvoyer ton colis après livraison",
+		"title2": "Modes de livraison",
+		"title3": "Retour",
+		"p1": "La loi belge sur les pratiques commerciales et sur l'information et la protection du consommateur du 14 juillet 1991 autorise le consommateur à notifier le vendeur qu'il/elle renonce à son achat dans les 14 jours ouvrables qui suivent la date de livraison ou de la conclusion du contrat.",
+		"p2": "11.71€ Livraison le lendemain avant 13h, du lundi au vendredi (pas le samedi) en France après expédition de votre commande.",
+		"p3": "7.80€ Livraison sous 48H à domicile en France après expédition de votre commande.",
+		"p4": "7.39€ Livraison sous 2 jours en point relais en France après expédition de ta commande. Gratuit au dela de 100€ de commande Livraison en Europe.",
+		"p5": " Livraison comprise entre 3 et 5 jours selon la zone après expédition de ta commande. ",
+		"p6": "Tu peux renvoyer les articles correctement emballés et affranchis par poste à Rue unlucky, 52, 4000 Belgique, Belgique. Il faut joindre une copie de votre facture et joindre toutes les coordonnées bancaires nécessaires. A la réception de ton colis, une note de crédit vous sera établie et les articles te seront remboursés. Spooknick games n'effectue aucun échange. "
+	},
+	"pay": {
+		"title1": "Moyens de paiement",
+		"title2": " Tu peux utiliser ses moyens de paiements",
+		"title3": "Nous n'acceptons pas",
+		"p1": "Les espèces",
+		"p2": "Les chèques ou mandats postaux "
+	},
+	"confidentiality": {
+		"title1": "Confidentialité ",
+		"title2": "Les coordonnées complètes de Spooknick Games",
+		"title3": "Traitement de données",
+		"title4": "Nous ne vendons pas tes données ",
+		"title5": "Paiement sécurisé",
+		"title6": "Protection de données",
+		"title7": "Communications email",
+		"title8": "Communications téléphoniques ",
+		"p1": "Société :",
+		"p2": "Adresse d'implantation :",
+		"p3": "Adresse postale : ",
+		"p4": "Chambre de commerce : ",
+		"p5": "Numéro de TVA :",
+		"p6": "Nous traitons les données que vous nous fournissez lorsque vous passez une commande via notre site web, lorsque vous vous inscrivez à notre newsletter ou lorsque vous prenez contact avec nous via le formulaire en ligne. Ces données peuvent concerner votre identité (nom, adresse, e-mail, etc.) ou être relatives au mode de paiement choisi.",
+		"p7": "Nous traitons en outre les 'données de circulation' des visiteurs sur notre site web. Ce qui nous amène à enregistrer l'adresse IP de votre ordinateur, et à analyser le comportement de navigation des visiteurs sur notre site web. Nous utilisons ces données dans l'unique but de traiter votre commande et d'améliorer nos services ainsi que le contenu de notre site web.",
+		"p8": "Nous ne vendons pas vos données à des tiers. Nous mettons vos données à la disposition des tiers impliqués dans l'exécution de votre commande uniquement. Nos collaborateurs, tout comme les tiers auxquels nous faisons appel, sont tenus de respecter la confidentialité de vos données. ",
+		"p9": "Ce site web fonctionne avec des cookies. Les cookies sont des petits fichiers contenant des informations, qui s'installent sur votre ordinateur via votre navigateur. Ces cookies servent à simplifier votre utilisation de notre site web. Vous pouvez paramétrer votre navigateur afin de ne pas recevoir de cookies lorsque vous faites vos achats sur www.spooknick.be. La désactivation des cookies risque cependant de limiter votre accès à notre site web et à nos services.",
+		"p10": "Afin de régler vos commandes de manière sure nous avons choisi les systèmes de paiement sécurisés de Ogone et Paypal, figurant parmis les systèmes les plus fiables sur internet. Leurs technologies très éfficaces encodent vos données bancaires dès que vous les introduisez et ne sont jamais accessibles durant l'opération; vous ne prenez donc aucun risque. Vous pouvez choisir pour un paiement par Bancontact, Visa, Mastercard ou avec un compte Paypal, de plus il est compatible avec toutes les banques Belges.",
+		"p11": "Nous mettons en œuvre des procédures de protection avancées afin d'assurer la sécurité des données que nous traitons, notamment pour éviter tout accès de personnes non autorisées à ces données.",
+		"p12": "Si vous ne souhaitez plus recevoir la newsletter www.spooknick.be, vous pouvez vous désinscrire de notre liste de destinataires, via notre site web. Pour cela, rendez-vous sur la page “Mon compte”. Vous pouvez également cliquer sur le lien figurant sur les e-mails que nous vous envoyons. La page “Mon compte” vous permet de visualiser vos données personnelles, et éventuellement de les modifier.",
+		"p13": "Si vous nous donnez votre numéro de téléphone via notre site web, nous vous appellerons uniquement si nécessaire, pour vous donner des informations relatives à vos commandes passées en ligne."
+	},
+	"condition": {
+		"title1": "Conditions générales",
+		"title2": "Conditions générales de vente",
+		"title3": "Produits proposés sur le site",
+		"title4": "Contrat avec Spooknick",
+		"title5": "Livraison de votre produit",
+		"title6": "Paiement",
+		"title7": "Renonciation et limitation de responsabilité",
+		"title8": "Loi applicable et juridiction compétence",
+		"p1": "Les présentes conditions générales de vente vous permettront de connaître précisément votre situation juridique lorsque vous consultez notre site et achetez chez Spoonick.",
+		"p2": "En accédant aux sites, vous acceptez d'être lié juridiquement et de respecter les dispositions et conditions exposées ci-dessous. À l'exclusion d'autres conditions générales éventuelles, les présentes conditions générales de vente s'appliquent à l'ensemble des offres, commandes et contrats de Spooknick.",
+		"p3": "Tous les produits proposés sont décrits en toute bonne foi et le plus fidèlement possible. Les offres et prix sont valables le jour où ils sont proposés sur notre site web et pour la période mentionnée dans nos catalogues et dépliants. Les prix indiqués incluent la TVA. Spooknick ne peut être tenu responsable des erreurs (d'impression) contenues dans ces offres.",
+		"p4": "Nous proposons nos produits sur notre site Web dans la limite des stocks disponibles. Spooknick met tout en œuvre pour veiller à ce que les produits que vous avez commandés soient disponibles. Il peut arriver cependant qu'un article soit épuisé. Dans ce cas, nous vous informons dans les plus brefs délais et vous pouvez choisir d'annuler votre commande. Spooknick ne peut être tenue responsable des dommages résultant de l'indisponibilité d'un produit.",
+		"p5": "Un contrat valide est conclu entre vous et Spooknick lorsque Spooknick reçoit la confirmation de votre commande sur son site web. Spooknick peut décider toutefois de subordonner la validité du contrat à d'autres conditions dans le cas, par exemple, de commandes importantes, de paiements anticipés, de commandes passées par des mineurs ou de non-paiement de commandes antérieures.",
+		"p6": "Conformément à la loi sur les pratiques commerciales, les pertes/dommages sont à la charge du vendeur. Vous devez mettre Spooknick au courant dans un délai acceptable (3 semaines) après réception de la confirmation d'envoi par e-mail ou via le statut de la commande sur le site. Spooknick se réserve le droit de refuser votre demande si celle-ci n'est pas reçue dans le délai indiqué. Vous pouvez envoyer votre message de non-réception à info@spooknick.be.",
+		"p7": "Votre produit sera livré à l'adresse indiquée dans votre commande. Le délai de livraison estimé est mentionné sur la page détaillée du produit. Spooknick met tout en œuvre pour garantir que vous recevrez votre produit dans les délais mentionnés sur notre site web. Ces délais de livraison ne sont toutefois mentionnés qu'à titre d'information et Spooknick ne peut être tenu responsable des retards éventuels.",
+		"p8": "Vous avez le choix entre un moyen de paiement par virement, par contre-remboursement ou avec une carte bancaire. La commande doit être payée au moment de la livraison.",
+		"p9": "Spooknick ne peut pas garantir que Spooknick.be fonctionnera sans interruption ni sans erreurs. Spooknick ne garantit pas les résultats qui pourraient découler de l'utilisation de Spooknick.be ni l'exactitude ou la fiabilité des informations fournies sur Spooknick.be. Ce site est mis à disposition par Spookncik en l'état et selon les disponibilités. Spooknick rejette toute déclaration ou garantie, explicite ou implicite, en rapport avec le fonctionnement du site, les informations, le contenu, le matériel ou les produits qui y sont présentés.",
+		"p10": "Toutes les offres de Spooknick sont sans engagement et valables jusqu'à épuisement des stocks. Spooknick se réserve expressément le droit de modifier les prix. Dans la mesure autorisée par la loi, Spooknick décline toute garantie, explicite ou implicite, en ce compris mais s'en s'y limiter, les garanties implicites de commerciabilité et d'adéquation à un usage spécifique. Spooknick ne pourra être tenue responsable d'un préjudice quel qu'il soit, découlant de l'utilisation de son site web, en ce compris mais s'en s'y limiter, les préjudices directs, consécutifs ou indirects.",
+		"p11": "Le droit belge est d'application. Seuls les tribunaux et les cours de l'arrondissement judiciaire de Bruxelles sont compétents en cas de litige."
 	},
 	"gamesKind": {
 		"adventure": "Aventure",
@@ -22,6 +102,10 @@
 		"strategy": "Stratégie"
 	},
 	"gamesList": {
+		"sort": "Trier par",
+		"button1": "Titre",
+		"button2": "Date",
+		"button3": "Note",
 		"title_kind": "Genre",
 		"title_lastReleases": "Dernières sorties",
 		"title_nextReleases": "Prochaines sorties",
@@ -30,8 +114,36 @@
 	},
 	"menu": {
 		"category": "Catégorie",
+		"new": "Nouveautés",
+		"last": "Dernières Sorties",
+		"coming": "Prochainement",
+		"cart": "Panier",
 		"login": "Se connecter",
 		"register": "S'enregistrer",
-		"shop": "Magasin"
+		"shop": "Magasin",
+		"connection": "Connexion",
+		"search": "Rechercher"
+	},
+	"form": {
+		"pass": "Mot de passe",
+		"box": "Se souvenir de moi",
+		"name": "Prénom",
+		"lastname": "Nom de famille",
+		"username": "Pseudo",
+		"passConfirm": "Confirmation mdp",
+		"box1": "J’ai lu et j’accepte les conditions générales d'utilisation",
+		"box2": "Je souhaite recevoir les newsletters et les bons plans Spooknick"
+	},
+	"footer": {
+		"ps": "Univers Playstation",
+		"xbox": "Univers Xbox",
+		"nintendo": "Univers Nintendo",
+		"pc": "Univers Pc",
+		"delivery": "Livraison",
+		"payment": "Paiement",
+		"confidentiality": "Confidentialité",
+		"condition": "Conditions Générales",
+		"about": "A propos",
+		"newsletter": "Abonne-toi pour ne jamais rien rater et être au courant des dernières nouveautées !"
 	}
 }

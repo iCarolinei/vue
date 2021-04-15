@@ -5,7 +5,7 @@
       <h4
         class="card-title border-bottom d-flex justify-content-center py-3 text-secondary"
       >
-        Questions courantes
+        {{ $t("faq.title1") }}
       </h4>
       <div class="d-flex justify-content-center">
         <b-dropdown
@@ -81,7 +81,7 @@
       <h4
         class="card-title border-bottom d-flex justify-content-center py-4 text-secondary"
       >
-        Gestion des données personnelles
+        {{ $t("faq.title2") }}
       </h4>
       <div class="d-flex justify-content-center">
         <b-dropdown
@@ -156,7 +156,7 @@
       <h4
         class="card-title border-bottom d-flex justify-content-center py-4 text-secondary"
       >
-        Livraison et retour
+        {{ $t("faq.title3") }}
       </h4>
       <div class="d-flex justify-content-center">
         <b-dropdown
@@ -213,8 +213,7 @@
       <h6
         class="card-title border-bottom d-flex justify-content-center py-4 text-secondary"
       >
-        Pour toutes autres questions, n'hésite pas de nous contactez sur les
-        réseaux 😉
+        {{ $t("faq.title4") }} 😉
       </h6>
       <div class="d-flex justify-content-center py-3">
         <small class="text-muted">
@@ -235,7 +234,7 @@
             <font-awesome-icon
               class="mx-4 dropdown-social"
               title="Instagram"
-              :icon="['fab', 'instagram-square']"/></a
+              :icon="['fab', 'instagram-square']" /></a
         ></small>
       </div>
     </div>
@@ -247,7 +246,7 @@
 export default {
   name: "Dropdown",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>

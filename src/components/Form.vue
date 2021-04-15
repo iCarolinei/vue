@@ -1,9 +1,11 @@
 <template>
   <div class="form">
-    <h1 class="d-flex justify-content-center pt-4 form-title">Register ❤️</h1>
+    <h1 class="d-flex justify-content-center pt-4 form-title">
+      {{ $t("menu.register") }} ❤️
+    </h1>
     <form id="formregister" @submit="checkForm" method="post">
       <div class="form-group">
-        <label for="exampleInputName">Prénom</label>
+        <label for="exampleInputName"> {{ $t("form.name") }}</label>
         <input
           v-model="name"
           type="text"
@@ -11,7 +13,7 @@
           class="form-control"
           id="exampleInputName"
           aria-describedby="NameHelp"
-          placeholder="Prénom"
+          placeholder="Duke"
         />
         <p class="form-color" v-if="nameValidationError">
           {{ nameValidationError }}
@@ -19,7 +21,7 @@
         <small id="SNameHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
-        <label for="exampleInputSecond">Nom</label>
+        <label for="exampleInputSecond"> {{ $t("form.lastname") }}</label>
         <input
           v-model="lastname"
           type="text"
@@ -27,7 +29,7 @@
           class="form-control"
           id="exampleInputSecond"
           aria-describedby="SNameHelp"
-          placeholder="Nom"
+          placeholder="Nukem"
         />
         <p class="form-color" v-if="lastnameValidationError">
           {{ lastnameValidationError }}
@@ -35,7 +37,7 @@
         <small id="PseudoHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
-        <label for="exampleInputPseudo">Pseudo</label>
+        <label for="exampleInputPseudo">{{ $t("form.username") }}</label>
         <input
           v-model="username"
           type="text"
@@ -43,7 +45,7 @@
           class="form-control"
           id="exampleInputPeusod"
           aria-describedby="PseudoHelp"
-          placeholder="Pseudo"
+          placeholder="Spooknick01"
         />
         <p class="form-color" v-if="usernameValidationError">
           {{ usernameValidationError }}
@@ -60,7 +62,7 @@
           class="form-control"
           id="exampleInputEmail"
           aria-describedby="EmailHelp"
-          placeholder="Email"
+          placeholder="callofduty@gmai.com"
         />
         <p class="form-color" v-if="emailValidationError">
           {{ emailValidationError }}
@@ -68,28 +70,28 @@
         <small id="MdpHelp" class="form-text text-muted"></small>
       </div>
       <div class="form-group">
-        <label for="exampleInputMdp">Mot de passe</label>
+        <label for="exampleInputMdp">{{ $t("form.pass") }}</label>
         <input
           v-model="password"
           name="password"
           type="password"
           class="form-control"
           id="exampleInputMdp"
-          placeholder="Mot de passe"
+          placeholder="******"
         />
         <p class="form-color" v-if="passwordValidationError">
           {{ passwordValidationError }}
         </p>
       </div>
       <div class="form-group">
-        <label for="exampleInputMdp2">Confirme mot de passe</label>
+        <label for="exampleInputMdp2">{{ $t("form.passConfirm") }}</label>
         <input
           v-model="confirmpassword"
           name="confirmpassword"
           type="password"
           class="form-control"
           id="exampleInputMdp2"
-          placeholder="Confirme ton mot de passe"
+          placeholder="******"
         />
         <p class="form-color" v-if="confirmPasswordValidationError">
           {{ confirmPasswordValidationError }}
@@ -97,19 +99,20 @@
       </div>
       <div class="form-check mt-4 form-valid">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1"
-          >J’ai lu et j’accepte les conditions générales d'utilisation</label
-        >
+        <label class="form-check-label" for="exampleCheck1">{{
+          $t("form.box1")
+        }}</label>
       </div>
       <div class="form-check mt-2 form-valid">
         <input type="checkbox" class="form-check-input" id="exampleCheck2" />
-        <label class="form-check-label" for="exampleCheck2"
-          >Je souhaite recevoir les newsletters et les bons plans
-          Spooknick</label
+        <label class="form-check-label" for="exampleCheck2">
+          {{ $t("form.box2") }}</label
         >
       </div>
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-info my-4 p-2">Soumettre</button>
+        <button type="submit" class="btn btn-info my-4 p-2">
+          {{ $t("contact.btn") }}
+        </button>
       </div>
     </form>
   </div>
@@ -133,11 +136,11 @@ export default {
       usernameValidationError: null,
       emailValidationError: null,
       passwordValidationError: null,
-      confirmPasswordValidationError: null
+      confirmPasswordValidationError: null,
     };
   },
   methods: {
-    checkForm: function(e) {
+    checkForm: function (e) {
       let validationOk = true;
       this.errors = [];
       this.nameValidationError = null;
@@ -197,10 +200,10 @@ export default {
       }
       e.preventDefault();
     },
-    validEmail: function(email) {
+    validEmail: function (email) {
       let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
-    }
-  }
+    },
+  },
 };
 </script>

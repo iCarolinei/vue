@@ -2,68 +2,52 @@
   <div class="card">
     <div class="card-body border-left border-right container">
       <h1 class="d-flex justify-content-center pt-1 form-title">
-        Livraison/retour ❤️
+        {{ $t("faq.title3") }} ❤️
       </h1>
       <h4
         class="card-title border-bottom d-flex justify-content-center py-3 text-primary"
       >
-        Tu as 14 jours pour renvoyer ton colis après livraison
+        {{ $t("delivery.title1") }}
       </h4>
 
       <div class="about-text pt-4 pb-2">
-        <p>
-          🚚 La loi belge sur les pratiques commerciales et sur l'information et
-          la protection du consommateur du 14 juillet 1991 autorise le
-          consommateur à notifier le vendeur qu'il/elle renonce à son achat dans
-          les 14 jours ouvrables qui suivent la date de livraison ou de la
-          conclusion du contrat.
-        </p>
+        <p>🚚 {{ $t("delivery.p1") }}</p>
       </div>
       <h4
         class="card-title border-bottom d-flex justify-content-center py-3 text-primary"
       >
-        Modes de livraison
+        {{ $t("delivery.title2") }}
       </h4>
 
       <div class="about-text pt-4 pb-2">
         <ul>
           <li>
-            <span class="text-primary">• Chronopost 13H :</span> 11.71€
-            Livraison le lendemain avant 13h, du lundi au vendredi (pas le
-            samedi) en France après expédition de votre commande.
+            <span class="text-primary">• Chronopost 13H :</span>
+
+            {{ $t("delivery.p2") }}
           </li>
           <li class="pt-2">
-            <span class="text-primary">• Colissimo :</span> 7.80€ Livraison sous
-            48H à domicile en France après expédition de votre commande.
+            <span class="text-primary">• Colissimo :</span>
+            {{ $t("delivery.p3") }}
           </li>
           <li class="pt-2">
-            <span class="text-primary"> • Chrono Relais 13 :</span> 7.39€
-            Livraison sous 2 jours en point relais en France après expédition de
-            ta commande. Gratuit au dela de 100€ de commande Livraison en
-            Europe.
+            <span class="text-primary"> • Chrono Relais 13 :</span>
+            {{ $t("delivery.p4") }}
           </li>
           <li class="pt-2">
             <span class="text-primary">• Colissimo International :</span>
-            Livraison comprise entre 3 et 5 jours selon la zone après expédition
-            de ta commande.
+            {{ $t("delivery.p5") }}
           </li>
         </ul>
       </div>
       <h4
         class="card-title border-bottom d-flex justify-content-center py-3 text-primary"
       >
-        Retour
+        {{ $t("delivery.title3") }}
       </h4>
 
       <div class="about-text pt-4 pb-2">
-        <p>
-          📦 Tu peux renvoyer les articles correctement emballés et affranchis
-          par poste à Rue unlucky, 52, 4000 Belgique, Belgique. Il faut joindre
-          une copie de votre facture et joindre toutes les coordonnées bancaires
-          nécessaires. A la réception de ton colis, une note de crédit vous sera
-          établie et les articles te seront remboursés. Spooknick games
-          n'effectue aucun échange.
-        </p>
+        <p>📦 {{ $t("delivery.p6") }}</p>
       </div>
     </div>
 
@@ -75,7 +59,7 @@
 export default {
   name: "SendingDelivery",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>

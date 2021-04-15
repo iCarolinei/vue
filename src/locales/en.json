@@ -1,9 +1,89 @@
 {
+	"spooknick": {
+		"title1": "But who are we ?",
+		"title2": "We are a small video game store in Liège",
+		"title3": "The",
+		"p1": "- Video games are the story of a lifetime. Just one more passion, it ended up being part of us, of our life. So who from better positioned to talk to you about what we really know?",
+		"p2": "adventure began on a day like any other except for us, of course. Motivated young people and geeks, looking for new challenges, we decided to set up our own start-up against all odds. This does not was not easy but we succeeded: we were able to make our lifelong dream come true.",
+		"p3": "who is committed to doing well and who not only sells games, and you allows you to play on arcades / consoles with friends but we let's also organize tournaments of your favorite games. Since January 2021, we are pleased to serve you, our loyal customer.",
+		"p4": "Thank you very much for supporting us because without you, we wouldn't be here. Below is an overview of the services we can offer you."
+	},
+	"shop": {
+		"title": "Where to find us"
+	},
+	"faq": {
+		"title1": "Common questions",
+		"title2": "Management of personal data",
+		"title3": "Delivery & return",
+		"title4": "For all other questions, do not hesitate to contact us on the networks"
+	},
 	"contact": {
 		"title": "Contact us ❤️",
 		"name": "Last name & First name",
 		"comment": "Your comment",
 		"btn": "Submit"
+	},
+	"delivery": {
+		"title1": "You have 14 days to return a package after delivery",
+		"title2": "Delivery methods",
+		"title3": "Return",
+		"p1": "The Belgian law on commercial practices and on consumer information and protection of July 14, 1991 authorizes the consumer to notify the seller that he / she renounces his / her purchase in 14 working days from the date of delivery or conclusion of the contract.",
+		"p2": "11.71 € Next day delivery before 1 p.m., Monday to Friday (no on Saturday) in France after shipment of your order.",
+		"p3": "7.80 € Delivery within 48 hours at home in France after shipment of your order.",
+		"p4": "€ 7.39 Delivery within 2 days to a relay point in France after shipment of your order. Free for orders over 100 € Delivery in Europe.",
+		"p5": "Delivery between 3 and 5 days depending on the area after shipment of your order.",
+		"p6": "You can return items properly packaged and prepaid by post at Rue unlucky, 52, 4000 Belgium, Belgium. You must join a copy of your invoice and attach all bank details required. Upon receipt of your package, you will receive a credit note established and the items will be refunded to you. Spooknick games does not make any exchanges."
+	},
+	"pay": {
+		"title1": "Means of payment",
+		"title2": "You can use his payment methods",
+		"title3": "We don't accept",
+		"p1": "The species",
+		"p2": "Checks or money orders"
+	},
+	"confidentiality": {
+		"title1": "Confidentiality",
+		"title2": "Spooknick Games full contact details",
+		"title3": "Data processing",
+		"title4": "We don't sell your data",
+		"title5": "Secure payment",
+		"title6": "Data protection",
+		"title7": "Email communications",
+		"title8": "Telephone communications",
+		"p1": "Society : ",
+		"p2": "Location address : ",
+		"p3": "Adress :",
+		"p4": "Chamber of Commerce : ",
+		"p5": "VAT number :",
+		"p6": "We process the data you provide to us when you pass an order through our website, when you register for our newsletter or when you contact us via the form online. These data may relate to your identity (name, address, e-mail, etc.) or relate to the chosen payment method.",
+		"p7": "We also process the 'traffic data' of visitors to our website. Which leads us to record the IP address of your computer, and analyze the browsing behavior of visitors on our website. We use this data for the sole purpose of process your order and improve our services as well as the content of our website.",
+		"p8": "We do not sell your data to third parties. We put your data available to third parties involved in the execution of your order only. Our employees, as well as third parties to whom we appeal, are required to respect the confidentiality of your data.",
+		"p9": "This website works with cookies. Cookies are small files containing information, which are installed on your computer through your browser. These cookies are used to simplify your use of our website. You can set your browser so that you do not receive cookies when you do your purchases on www.spooknick.be. Disabling cookies may however, to limit your access to our website and our services.",
+		"p10": "In order to pay your orders in a safe way, we have chosen the secure payment systems of Ogone and Paypal, which are among the most reliable systems on the internet. Their very efficient technologies encode your bank details as soon as you enter them and are never accessible during the operation; so you don't take any risk. You can choose for payment by Bancontact, Visa, Mastercard or with a Paypal account, in addition it is compatible with all Belgian banks.",
+		"p11": "We implement advanced protection procedures to ensure the security of the data we process, in particular to prevent unauthorized access to this data.",
+		"p12": "If you no longer wish to receive the www.spooknick.be newsletter, you can unsubscribe from our list of recipients, via our website. To do this, go to the “My account” page. You can also click on the link on any emails we send you. The “My account” page allows you to view your personal data, and possibly modify them.",
+		"p13": "If you give us your phone number through our website, we will call you only if necessary, to give you information about your online orders."
+	},
+	"condition": {
+		"title1": "Terms & conditions",
+		"title2": "Terms of Sales",
+		"title3": "Products offered on the site",
+		"title4": "Contract with Spooknick",
+		"title5": "Delivery of your product",
+		"title6": "Payment",
+		"title7": "Disclaimer and limitation of liability",
+		"title8": "Applicable law and jurisdiction",
+		"p1": "These general conditions of sale will allow you to know precisely your legal situation when you consult our site and buy from Spoonick.",
+		"p2": "By accessing the sites, you agree to be legally bound and to respect the terms and conditions set out below. To the exclusion of any other general conditions, these general conditions of sale apply to all Spooknick offers, orders and contracts.",
+		"p3": "All the products offered are described in good faith and as accurately as possible. The offers and prices are valid on the day they are offered on our website and for the period mentioned in our catalogs and brochures. Prices shown include VAT. Spooknick cannot be held responsible for (printing) errors contained in these offers.",
+		"p4": "We offer our products on our website while stocks last. Spooknick makes every effort to ensure that the products you have ordered are available. However, it may happen that an item is sold out. In this case, we will inform you as soon as possible and you can choose to cancel your order. Spooknick cannot be held responsible for damages resulting from the unavailability of a product.",
+		"p5": "A valid contract is concluded between you and Spooknick when Spooknick receives confirmation of your order on its website. Spooknick may, however, decide to make the validity of the contract subject to other conditions in the case, for example, of large orders, advance payments, orders placed by minors or non-payment of previous orders.",
+		"p6": "In accordance with the law on commercial practices, loss / damage is the responsibility of the seller. You must notify Spooknick within an acceptable period of time (3 weeks) of receipt of the shipment confirmation by e-mail or via the order status on the site. Spooknick reserves the right to refuse your request if it is not received within the time limit indicated. You can send your non-receipt message to info@spooknick.be.",
+		"p7": "Your product will be delivered to the address indicated in your order. The estimated delivery time is mentioned on the product detail page. Spooknick makes every effort to ensure that you will receive your product within the time frame mentioned on our website. These delivery times are however only mentioned for information and Spooknick cannot be held responsible for any delays.",
+		"p8": "You have the choice between a means of payment by transfer, by cash on delivery or with a bank card. The order must be paid for at the time of delivery.",
+		"p9": "Spooknick cannot guarantee that Spooknick.be will function without interruption or without errors. Spooknick does not guarantee the results that may arise from the use of Spooknick.be nor the accuracy or reliability of the information provided on Spooknick.be. This site is provided by Spookncik as is and subject to availability. Spooknick disclaims any representation or warranty, express or implied, in connection with the operation of the site, the information, content, material or products presented therein.",
+		"p10": "All Spooknick offers are non-binding and valid while stocks last. Spooknick expressly reserves the right to modify the prices. To the extent permitted by law, Spooknick disclaims all warranties, express or implied, including but limited to, the implied warranties of merchantability and fitness for a specific purpose. Spooknick cannot be held responsible for any damage whatsoever, arising from the use of its website, including but limited to direct, consequential or indirect damage.",
+		"p11": "Belgian law is applicable. Only the courts and courts of the judicial district of Brussels are competent in the event of a dispute."
 	},
 	"gamesKind": {
 		"adventure": "Adventure",
@@ -22,6 +102,10 @@
 		"strategy": "Strategy"
 	},
 	"gamesList": {
+		"sort": "Sort by",
+		"button1": "Title",
+		"button2": "Date",
+		"button3": "Rating",
 		"title_kind": "Kind",
 		"title_lastReleases": "Last releases",
 		"title_nextReleases": "Next releases",
@@ -30,8 +114,36 @@
 	},
 	"menu": {
 		"category": "Category",
+		"new": "Novelties",
+		"last": "Latest Releases",
+		"coming": "Soon",
 		"login": "Login",
+		"cart": "Cart",
 		"register": "Register",
-		"shop": "Shop"
+		"shop": "Shop",
+		"connection": "Connection",
+		"search": "Search"
+	},
+	"form": {
+		"pass": "Password",
+		"box": "Remember-me",
+		"name": "First name",
+		"lastname": "Last name",
+		"username": "Username",
+		"passConfirm": "Password confirmation",
+		"box1": "I have read and accept the general conditions ",
+		"box2": "I would like to receive Spooknick newsletters and tips"
+	},
+	"footer": {
+		"ps": "Playstation universe",
+		"xbox": "Xbox universe",
+		"nintendo": "Nintendo universe",
+		"pc": "Pc universe",
+		"delivery": "Delivery",
+		"payment": "Payment",
+		"confidentiality": "Confidentiality",
+		"condition": "Terms & Conditions",
+		"about": "About",
+		"newsletter": "Subscribe to never miss a thing and be up to date with the latest news!"
 	}
 }

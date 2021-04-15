@@ -2,12 +2,12 @@
   <div class="card">
     <div class="card-body border-left border-right container">
       <h1 class="d-flex justify-content-center pt-1 form-title">
-        Moyens de paiement ❤️
+        {{ $t("pay.title1") }} ❤️
       </h1>
       <h4
         class="card-title border-bottom d-flex justify-content-center py-3 text-warning"
       >
-        Tu peux utiliser ses moyens de paiements
+        {{ $t("pay.title2") }}
       </h4>
 
       <div class="about-text pt-4 pb-2 d-flex justify-content-center">
@@ -49,18 +49,16 @@
       <h4
         class="card-title border-bottom d-flex justify-content-center py-3 text-warning"
       >
-        Nous n'acceptons pas
+        {{ $t("pay.title3") }}
       </h4>
 
       <div class="about-text pt-4 pb-2 d-flex justify-content-center">
         <ul>
           <li>
-            <span class="text-primary">• Les espèces 💸</span>
+            <span class="text-primary">💸 {{ $t("pay.p1") }}</span>
           </li>
           <li class="pt-2">
-            <span class="text-primary">
-              • Les chèques ou mandats postaux 🧾</span
-            >
+            <span class="text-primary">🧾 {{ $t("pay.p2") }}</span>
           </li>
         </ul>
       </div>
@@ -74,7 +72,7 @@
 export default {
   name: "Money",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>
