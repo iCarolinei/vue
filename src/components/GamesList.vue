@@ -75,13 +75,13 @@
           </div>
 
           <li
-            class="list-group-item text-secondary game-summary d-flex justify-content-center py-4"
+            class="list-group-item text-secondary game-summary d-flex justify-content-center pt-4 pb-4 game-content"
             v-if="game.summary !== undefined"
           >
             {{ getSummary(game.summary) }}
           </li>
           <li
-            class="list-group-item text-secondary game-summary d-flex justify-content-center py-4"
+            class="list-group-item text-secondary game-summary d-flex justify-content-center pt-4 pb-4 game-content"
             v-else
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
@@ -90,9 +90,10 @@
             molestiae corrupti minima perspiciatis. Dolorum velit suscipit
             facilis pariatur aliquid dignissimos, in (...)
           </li>
+
           <li class="d-flex flex-row justify-content-center align-self-center">
             <img
-              class="platform-img card-img-top pt-4 m-1"
+              class="platform-img card-img-top m-2 pt-2"
               v-for="platform in game.platforms"
               :key="platform.id"
               :src="platform.imageUrl"
@@ -100,6 +101,7 @@
               :alt="platform.name"
             />
           </li>
+
           <li class="list-group-item game-url d-flex justify-content-center">
             <font-awesome-icon icon="link" /><span class="mx-2">
               <a v-bind:href="game.url">{{ game.url }}</a>
@@ -112,6 +114,7 @@
     <div v-else>
       <h1>No game to display :(</h1>
     </div>
+
     <scroll-loader :loader-method="GetGames" :loader-disable="!loadMore">
     </scroll-loader>
   </div>

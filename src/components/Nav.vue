@@ -36,7 +36,7 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Catégories
+                {{ $t("menu.category") }}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <router-link
@@ -246,10 +246,8 @@
                 Nouveautés
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <router-link to="/register"
-                  ><a class="dropdown-item nav-item-left" href="#"
-                    >Dernières sorties</a
-                  ></router-link
+                <a class="dropdown-item nav-item-left" href="#"
+                  >Dernières sorties</a
                 >
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item nav-item-left" href="#"

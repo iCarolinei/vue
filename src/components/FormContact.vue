@@ -5,35 +5,37 @@
         {{ $t("contact.title") }}
       </h1>
       <div class="form-group">
-        <label for="nameLastName">Nom et prénom</label>
+        <label for="nameLastName"> {{ $t("contact.name") }}</label>
         <input
           type="text"
           class="form-control"
           id="nameLastName"
           aria-describedby="nameLastName"
-          placeholder="Inscrit ton nom et prénom"
+          placeholder="Morgan Arthur"
         />
       </div>
       <div class="form-group">
         <label for="emailContact">Email</label>
         <input
-          type="password"
+          type="email"
           class="form-control"
           id="emailContact"
-          placeholder="Inscris ton email"
+          placeholder="cyberpunk@gmail"
         />
       </div>
       <div class="form-floating">
-        <label for="emailContact">Ton commentaire</label>
+        <label for="emailContact">{{ $t("contact.comment") }}</label>
         <textarea
           class="form-control"
-          placeholder="Laisse ton petit commentaire ici 😁"
+          placeholder="😁"
           id="floatingTextarea2"
           style="height: 100px"
         ></textarea>
       </div>
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-info my-4 p-2">Soumettre</button>
+        <button type="submit" class="btn btn-info my-4 p-2">
+          {{ $t("contact.btn") }}
+        </button>
       </div>
       <div class="container-bird">
         <div class="bird-container bird-container--one">

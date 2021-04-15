@@ -1,6 +1,9 @@
 {
 	"contact": {
-		"title": "Contact us ❤️"
+		"title": "Contact us ❤️",
+		"name": "Last name & First name",
+		"comment": "Your comment",
+		"btn": "Submit"
 	},
 	"gamesKind": {
 		"adventure": "Adventure",
@@ -26,6 +29,7 @@
 		"title_search": "Search"
 	},
 	"menu": {
+		"category": "Category",
 		"login": "Login",
 		"register": "Register",
 		"shop": "Shop"
