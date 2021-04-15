@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <img class="img-footer" src="../assets/4.jpg" />
+    <img class="img-footer" src="../assets/b.gif" />
   </div>
 </template>
 

@@ -238,7 +238,7 @@
         ></small>
       </div>
     </div>
-    <img class="img-footer" src="../assets/gta.jpg" />
+    <img class="img-footer" src="../assets/d.gif" />
   </div>
 </template>
 

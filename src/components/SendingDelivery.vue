@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <img class="img-footer" src="../assets/2.jpg" />
+    <img class="img-footer" src="../assets/c.png" />
   </div>
 </template>
 

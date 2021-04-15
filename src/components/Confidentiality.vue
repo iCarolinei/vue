@@ -115,7 +115,7 @@
       </div>
     </div>
 
-    <img class="img-footer" src="../assets/5.jpg" />
+    <img class="img-footer" src="../assets/4.jpg" />
   </div>
 </template>
 
