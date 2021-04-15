@@ -62,7 +62,7 @@
           class="form-control"
           id="exampleInputEmail"
           aria-describedby="EmailHelp"
-          placeholder="callofduty@gmai.com"
+          placeholder="callofduty@gmail.com"
         />
         <p class="form-color" v-if="emailValidationError">
           {{ emailValidationError }}
