@@ -361,7 +361,7 @@
         </div>
       </nav>
     </div>
-    <img class="nav-banner" src="../assets/banner.gif" />
+    <img class="nav-banner" src="../assets/test1.gif" />
     <router-view :key="$route.fullPath" />
   </div>
 </template>
